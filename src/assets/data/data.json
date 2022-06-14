@@ -15,7 +15,7 @@
         "start":"2006",
         "end":"Actualidad",
         "timeElapsed": "16 años y 6 meses",
-        "web":"www.elultimo.com"
+        "web":"Ver mas"
         },
         {
         "Company":"Toxicologia Integral Argentina S.A.",
@@ -25,7 +25,7 @@
         "start":"2002",
         "end":"2005",
         "timeElapsed": "3 años",
-        "web":"www.elpenult.com"
+        "web":"Ver mas"
         }    
     
     ],
@@ -38,7 +38,7 @@
         "career" : "Argentina Programa",
         "start" : "2021",
         "end" : "2022", 
-        "web" : "Web Page"
+        "web" : "Ver mas"
             },
         {
         "school" : "Universidad de concepción del Uruguay",
@@ -47,7 +47,7 @@
         "career" : "Bromatologia y Produccion Alimetaria",
         "start" : "2001",
         "end" : "2006",
-        "web" : "Web Page"
+        "web" : "Ver mas"
 
         },
         {
@@ -57,7 +57,7 @@
         "career" : "Química",
         "start" : "1991",
         "end" : "1997", 
-        "web" : "Web Page"
+        "web" : "Ver mas"
         }
     ],
 
@@ -164,22 +164,8 @@
         "projectName":"Project 4",
         "web":"www.proyecto4.com",
         "img":"../../assets/mondrian.JPG"
-        },
-        {
-        "projectName":"Project 5",
-        "web":"www.proyecto5.com",
-        "img":"../../assets/monet.JPG"
-        },
-        {
-        "projectName":"Project 6",
-        "web":"www.proyecto6.com",
-        "img":"../../assets/davinci.JPG"
-        },
-        {
-        "projectName":"Project 7",
-        "web":"www.proyecto7.com",
-        "img":"../../assets/dali.JPG"
         }
+        
     ]
     
 

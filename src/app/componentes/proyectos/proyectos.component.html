@@ -1,57 +1,28 @@
 <div class="container mb-3">
 
 <div class="col">
-    <div class="card fondo shadow-lg rounded" style="--bs-bg-opacity: 0.5 ;">
+    <div class="card fondo shadow rounded">
       <div class="card-body">
         <h5 class="card-title texto">Proyectos</h5>
-        <div class="container">
-          <div class="row">
-            <!-- proyecto 1 -->
+        
+          <div class="row mt-3 ">
             <div class="col">
-              <button type="button" class="btn"><a href="#" class="link-secondary ">
-                  <div class="card project tarjeta shadow rounded " style="--bs-bg-opacity: 0.65;">
-                    <div class="card-body">
-                      <h5 class="card-title mt-2 mb-3">&nbsp; &nbsp;Proyecto 1 &nbsp;&nbsp; </h5>
-
-                    </div>
-                  </div>
+            <li *ngFor="let proyecto of proyectosList">
+            <button type="button" class="btn tarjeta m-3 p-3"><a href="#" class="link-secondary "> 
+                     {{proyecto.projectName}}
                 </a>
               </button>
-            </div>
-
-            <!-- proyecto 2 -->
-            <div class="col">
-              <button type="button" class="btn"><a href="#" class="link-secondary">
-                  <div class="card project tarjeta  shadow rounded" style="--bs-bg-opacity: 0.65;">
-                    <div class="card-body">
-                      <h5 class="card-title mt-2 mb-3">&nbsp;&nbsp; Proyecto 2 &nbsp;&nbsp;</h5>
-
-                    </div>
-                  </div>
-                </a>
-              </button>
-            </div>
+            </li>
           </div>
+        </div>
 
-          <div class="row">
-            <!-- proyecto 3 -->
-            <div class="col">
-              <button type="button" class="btn"><a href="#" class="text-decoration-none link-secondary ">
-                <div class="card project tarjeta shadow rounded" style="--bs-bg-opacity: 0.65;">
-                  <div class="card-body">
-                    <h5 class="card-title mt-2 mb-3">&nbsp;&nbsp; Proyecto 3 &nbsp;&nbsp; </h5>
-
-                  </div>
-                </div>
-              </a>
-              </button>
-            </div>
+           
 
             <!-- mas proyectos-->
-            <div class="col">
-              <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+            <div class="row mt-5 mb-3">
+              <button class="btn project" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
                 aria-controls="offcanvasTop">
-                <div class="card project tarjeta shadow rounded" style="--bs-bg-opacity: 0.65;">
+                <div class="card project tarjeta shadow rounded" >
                   <div class="card-body masproy">
                     <h5 class="card-title mt-2 mb-3 ">Mas proyectos</h5>
                   </div>
@@ -172,5 +143,3 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
