@@ -8,8 +8,8 @@
     "experience": 
     [
         {
-        "Company":"El ultimo trabajo",
-        "img":"../../assets/dali.JPG",
+        "Company":"Synthon Argentina S.A.",
+        "img":"../../assets/synthon.jpg",
         "position":"Coordinadora de Control de Calidad",
         "mode":"Jornada completa",
         "start":"2006",
@@ -18,8 +18,8 @@
         "web":"www.elultimo.com"
         },
         {
-        "Company":"El anterior trabajo",
-        "img":"../../assets/davinci.JPG",
+        "Company":"Toxicologia Integral Argentina S.A.",
+        "img":"../../assets/tiasa.JPG",
         "position":"Analista de Laboratorio",
         "mode":"Jornada completa",
         "start":"2002",
@@ -38,26 +38,26 @@
         "career" : "Argentina Programa",
         "start" : "2021",
         "end" : "2022", 
-        "web" : "www.argentinaprograma.inti.gob.ar"
+        "web" : "Web Page"
             },
         {
         "school" : "Universidad de concepción del Uruguay",
         "title" : "Liceciatura",
-        "img" : "../../assets/monet.JPG",
+        "img" : "../../assets/UCU.jpg",
         "career" : "Bromatologia y Produccion Alimetaria",
         "start" : "2001",
         "end" : "2006",
-        "web" : "www.ucu.edu.ar"
+        "web" : "Web Page"
 
         },
         {
         "school" : "Escuela Educaciòn Técnica nº 469",
         "title" : "Técnica Química",
-        "img" : "../../assets/mondrian.JPG",
+        "img" : "../../assets/EET469.jpg",
         "career" : "Química",
         "start" : "1991",
         "end" : "1997", 
-        "web" : "www.eet469.com.ar"
+        "web" : "Web Page"
         }
     ],
 

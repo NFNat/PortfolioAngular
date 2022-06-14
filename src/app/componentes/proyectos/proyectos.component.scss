@@ -8,9 +8,18 @@ a {
     
 }
 .tarjeta {
-    background-color: #524e4c;
+    background-color: rgba(248, 6, 204,0.5);
 }
 .project {
 
     transition: transform 0.2s ease;
 }
+
+.fondo {
+    background-color: rgba(46, 2, 59, 0.9);
+  }
+  
+  .texto {
+    color: #827397;
+    font-weight: bold;
+  }
