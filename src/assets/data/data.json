@@ -1,0 +1,188 @@
+{
+    "name": "Natalia S. Fuoco",
+    "Image":"../../assets/foto_.jpg",
+    "position":"Web Developer",
+    "scope":"Full Stack Jr.",
+    "location":"Argentina",
+    "about": "Aca va la sarasa del about que hay que poner que uno es hiper contratablr ",
+    "experience": 
+    [
+        {
+        "Company":"El ultimo trabajo",
+        "img":"../../assets/dali.JPG",
+        "position":"Coordinadora de Control de Calidad",
+        "mode":"Jornada completa",
+        "start":"2006",
+        "end":"Actualidad",
+        "timeElapsed": "16 años y 6 meses",
+        "web":"www.elultimo.com"
+        },
+        {
+        "Company":"El anterior trabajo",
+        "img":"../../assets/davinci.JPG",
+        "position":"Analista de Laboratorio",
+        "mode":"Jornada completa",
+        "start":"2002",
+        "end":"2005",
+        "timeElapsed": "3 años",
+        "web":"www.elpenult.com"
+        }    
+    
+    ],
+    "education":
+    [
+        {
+        "school" : "Ministerio de Desarrollo Productivo - INTI ",
+        "title" : "Web Developer full Stak Jr",
+        "img" : "../../assets/logoArgP.JPG",
+        "career" : "Argentina Programa",
+        "start" : "2021",
+        "end" : "2022", 
+        "web" : "www.argentinaprograma.inti.gob.ar"
+            },
+        {
+        "school" : "Universidad de concepción del Uruguay",
+        "title" : "Liceciatura",
+        "img" : "../../assets/monet.JPG",
+        "career" : "Bromatologia y Produccion Alimetaria",
+        "start" : "2001",
+        "end" : "2006",
+        "web" : "www.ucu.edu.ar"
+
+        },
+        {
+        "school" : "Escuela Educaciòn Técnica nº 469",
+        "title" : "Técnica Química",
+        "img" : "../../assets/mondrian.JPG",
+        "career" : "Química",
+        "start" : "1991",
+        "end" : "1997", 
+        "web" : "www.eet469.com.ar"
+        }
+    ],
+
+    "idiomas":
+    [
+        {"idioma":"Español",
+          "alcance": "Nivel Alcanzado", 
+          "nivel":"C2 (Nativo)",
+          "porc":"100"
+        },
+        {
+        "idioma":"English",
+        "alcance": "Level Reached", 
+         "nivel":"B2 (Upper Intermediate)",  
+         "porc":"75"
+
+        },
+        {
+        "idioma":"Português",
+        "alcance": "Nível Atingido", 
+        "nivel":"B1 (Intermediário)",
+        "porc":"50"
+
+        },
+        {
+        "idioma":"Français",
+        "alcance": "Niveau Atteint", 
+        "nivel":"A1 (Debutant)",
+          "porc":"25"
+
+        }
+
+    ],
+
+    "skills":
+    [
+        {
+        "skill":"HTML",
+        "progress":50,
+        "confirms":2,
+        "confirmsNames":[{
+            "name": "Natalia S. Fuoco"
+        }]
+        },
+        {
+        "skill":"CSS",
+        "progress":50,
+        "confirms":2,
+        "confirmsNames":[{
+            "name": "Natalia S. Fuoco"
+            }]
+        },
+        {
+        "skill":"JS",
+        "progress":25,
+        "confirms":2,
+        "confirmsNames":[{
+            "name": "Natalia S. Fuoco"
+        }]
+        },
+        {
+        "skill":"Boostrap",
+        "progress":50,
+        "confirms":2,
+        "confirmsNames":[{
+            "name": "Natalia S. Fuoco"
+            }]
+        },
+        {
+        "skill":"Angular",
+        "progress":25,
+        "confirms":2,
+        "confirmsNames":[{
+            "name": "Natalia S. Fuoco"
+            }]
+        },
+            {
+        "skill":"GIT",
+        "progress":25,
+        "confirms":2,
+        "confirmsNames":[{
+            "name": "Natalia S. Fuoco"
+            }]
+        }
+    ],
+    "projects":
+    [
+        {
+        "projectName":"Project 1",
+        "web":"www.proyecto1.com",
+        "img":"../../assets/picasso.JPG"
+        },
+        {
+        "projectName":"Project 2",
+        "web":"www.proyecto2.com",
+        "img":"../../assets/vangogh.JPG"
+        },
+        {
+        "projectName":"Project 3",
+        "web":"www.proyecto3.com",
+        "img":"../../assets/warhol.JPG"
+        },
+        {
+        "projectName":"Project 4",
+        "web":"www.proyecto4.com",
+        "img":"../../assets/mondrian.JPG"
+        },
+        {
+        "projectName":"Project 5",
+        "web":"www.proyecto5.com",
+        "img":"../../assets/monet.JPG"
+        },
+        {
+        "projectName":"Project 6",
+        "web":"www.proyecto6.com",
+        "img":"../../assets/davinci.JPG"
+        },
+        {
+        "projectName":"Project 7",
+        "web":"www.proyecto7.com",
+        "img":"../../assets/dali.JPG"
+        }
+    ]
+    
+
+}
+
+

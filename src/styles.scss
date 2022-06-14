@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+$secondary: #91075c;
+
+$theme-colors: (
+  "secondary": $secondary,
+  
+);
+
+
+.page {
+
+  background-image: url(../images/galaxy.jpg); 
+  background-size: contain;
+  
+
+}
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

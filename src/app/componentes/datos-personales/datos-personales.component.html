@@ -1,0 +1,31 @@
+
+
+<div class="container">
+    <div class="row">
+
+      <div class="col-12 col-sm-3 mb-3">
+        <div class="card fondo shadow rounded align-items-center">
+          <div class="card-body">
+            <!-- foto de perfil -->
+            
+            <img 
+            Class="border-2 rounded-circle foto"
+            [src]="miPortifolio.Image"
+            />
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-9 mb-3">
+        <div class="card fondo shadow rounded">
+          <div class="card-body">
+            <!-- datos -->
+            <div class="col-6 texto "> {{miPortifolio.name}}<br> <br> {{miPortifolio.position}} <br> {{miPortifolio.scope}} <br>
+             {{miPortifolio.location}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
