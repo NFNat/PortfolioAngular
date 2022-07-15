@@ -14,6 +14,10 @@ import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -27,12 +31,17 @@ import { FooterComponent } from './componentes/footer/footer.component';
     IdiomasComponent,
     ProyectosComponent,
     ContactoComponent,
-    FooterComponent
+    FooterComponent,
+    IniciarSesionComponent,
+    PortfolioComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
