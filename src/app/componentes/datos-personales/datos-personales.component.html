@@ -10,10 +10,10 @@
             
             <img 
             Class="border-2 rounded-circle foto img-fluid"
-            [src]="persona.img"
+            src="../../assets/foto_.jpg"
             />
 
-
+<!-- '{{persona.img}}' -->
           </div>
         </div>
       </div>
@@ -21,8 +21,8 @@
         <div class="card fondo shadow rounded">
           <div class="card-body">
             <!-- datos -->
-            <div class="col-6 texto "> {{persona.nombre}} {{persona.apellido}}<br> <br> {{persona.apellido}} aca va la posicion <br> aca va el scope <br>
-             aca va la ciudad
+            <div class="col-6 texto "> {{persona.nombre}} {{persona.apellido}}<br> <br> {{persona.posicion}} <br> {{persona.scope}}<br>
+             {{persona.ciudad}}
             </div>
           </div>
         </div>

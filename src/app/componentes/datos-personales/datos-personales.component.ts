@@ -10,7 +10,7 @@ import { PersonaService } from 'src/app/servicio/persona.service';
 })
 export class DatosPersonalesComponent implements OnInit {
   
-  persona: persona = new persona("","","");
+  persona: persona = new persona("","","","","","");
  
 
 constructor(public personaService: PersonaService){ }
