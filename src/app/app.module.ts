@@ -19,6 +19,7 @@ import { PortfolioComponent } from './componentes/portfolio/portfolio.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     HttpClientModule,
     ReactiveFormsModule,
     NgCircleProgressModule.forRoot({})
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
