@@ -41,8 +41,11 @@
                     <a class="nav-link text-secondary fw-bold" href="#">Contacto</a>
                   </li>
                   <li class="nav-item">
-                    <button type="button" class="btn btn-outline-secondary fw-bold">Login</button>
+                    <button type="button" class="btn btn-outline-secondary fw-bold" (click)="login()" *ngIf="!isLogged" >Login</button>
                   </li>
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-outline-secondary fw-bold" (click)="onLogOut()" *ngIf="isLogged">Logout</button>
+                  </li> 
                 </ul>
               </div>
             </div>

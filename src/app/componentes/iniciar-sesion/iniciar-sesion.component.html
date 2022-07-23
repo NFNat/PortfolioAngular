@@ -1,22 +1,36 @@
 <div class="container m-5">
-<form>
+<!-- <form> -->
+
+
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="card fondo shadow rounded">
           <div class="card-body">
-            <h5 class="card-title texto"> Login</h5>
+            <h5 class="card-title texto"> Login </h5>
 
-            <label for="exampleInputEmail1" class="form-label texto">Email address</label>
-            <input type="email" class="form-control tarjeta" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <form #f="ngForm" (ngSubmit)=" onLogin()" novalidate>
+              <label for="nombreUsuario" class="form-label texto">User</label>
+              <input type="email" class="form-control tarjeta" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required />
+  
+              <div class="mb-3">
+                <label for="password" class="form-label texto ">Password</label>
+                <input type="password" name="password" class="form-control tarjeta" id="password"  [(ngModel)]="password" required>
+              </div>
+  
+              <button type="submit" class="btn btn-secondary tarjeta">Login</button>
 
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label texto ">Password</label>
-              <input type="password" class="form-control tarjeta" id="exampleInputPassword1">
-            </div>
+            </form>
 
-            <button type="submit" class="btn btn-secondary tarjeta">Submit</button>
+
+           
           </div>
+          <div>
+            <p class="form-label texto ">¿No tienes una cuenta? <a href="#!" class="form-label texto ">Sign Up</a>
+            </p>
+          </div>
+
+
         </div>
       </div>
 
@@ -26,5 +40,5 @@
 
 
 
-</form>
+<!-- </form> -->
 </div>

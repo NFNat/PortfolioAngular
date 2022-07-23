@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona.model';
-import { PortifolioService } from 'src/app/servicio/portifolio.service';
+//import { PortifolioService } from 'src/app/servicio/portifolio.service';
+import { PersonaService } from 'src/app/servicio/persona.service';
 
 @Component({
   selector: 'app-about',
@@ -9,24 +10,36 @@ import { PortifolioService } from 'src/app/servicio/portifolio.service';
 })
 export class AboutComponent implements OnInit {
   
-
-  
-   miPortifolio:any;
-   about:any=false;
-  constructor(private datosPortifolio:PortifolioService) { }
-
-  ngOnInit(): void {this.datosPortifolio.obtenerDatos().subscribe(data =>{this.miPortifolio=data;
-  });
-  
+ 
+  persona: persona = new persona("","","","","","","");
  
 
-    
-  }
+constructor(public personaService: PersonaService){ }
+  
+
+  ngOnInit(): void {
+    this.personaService.getPersona().subscribe(data => {this.persona = data})
+
+  };
+  
 
 
-  editAbout() {
-    console.log("editando el about");
-   this.about=true;
 
-  }
+
+
+
+  //  miPortifolio:any;
+  //  about:any=false;
+  // constructor(private datosPortifolio:PortifolioService) { }
+
+  // ngOnInit(): void {this.datosPortifolio.obtenerDatos().subscribe(data =>{this.miPortifolio=data;
+  // });
+   
+  // }
+
+  // editAbout() {
+  //   console.log("editando el about");
+  //  this.about=true;
+
+  // }
 }

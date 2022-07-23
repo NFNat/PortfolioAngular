@@ -9,15 +9,20 @@
       </div>
         
       </div>
-      <div class="col-1 " ><div class="btn-edit text-end m-2"><a href="#" (click)="editAbout()"> <i class="fa fa-pen text-secondary"></i></a></div></div>
+       <!-- <div class="col-1 " ><div class="btn-edit text-end m-2"><a href="#" (click)="editAbout()"> <i class="fa fa-pen text-secondary"></i></a></div></div> --> 
+       <div class="col-1 " ><div class="btn-edit text-end m-2"><a href="#"> <i class="fa fa-pen text-secondary"></i></a></div></div>
+
+
+
+       
 
     </div>
     <div class="row texto   m-2 mb-4">
       <div class="col">
-    <p class="card-text">{{miPortifolio.about}}</p>
+    <p class="card-text">{{persona.about}}</p>
   </div>
   
-  <ng-template [ngIf]="about"><input type="text" placeholder="Ingresar nueva descripcion"></ng-template>
+  
 
 
 </div>
