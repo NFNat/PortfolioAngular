@@ -18,6 +18,9 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { interceptorProvider } from './servicio/interceptor-service';
+import { NewExperienciaComponent } from './componentes/exp-laboral/new-experiencia.component';
+import { EditExperienciaComponent } from './componentes/exp-laboral/edit-experiencia.component';
 
 
 @NgModule({
@@ -34,7 +37,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     ContactoComponent,
     FooterComponent,
     IniciarSesionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
     
   ],
   imports: [
@@ -46,7 +51,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     NgCircleProgressModule.forRoot({})
     
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
