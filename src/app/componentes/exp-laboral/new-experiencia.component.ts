@@ -12,14 +12,23 @@ export class NewExperienciaComponent implements OnInit {
   nombreE: string ='';
   descripcionE: string = '';
 
+  positionE: string = '';
+  modoE: string = '';
+  startE: string = '';
+  endE: string = '';
+  webE: string = '';
+
+
+
+
   constructor(private servExperiencia: ServExperienciaService, private router: Router) { }
 
   ngOnInit(): void {
   }
   onCreate():void{
-    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    const expe = new Experiencia(this.nombreE, this.descripcionE, this.positionE, this.modoE, this.startE, this.endE, this.webE);
     this.servExperiencia.save(expe).subscribe(data =>{
-      alert("experiencia añadidad");
+      alert("experiencia añadida");
       this.router.navigate(['']);
     }, err =>{
       alert("Falló");

@@ -1,17 +1,104 @@
-<div class="container" *ngIf="expLab">
-    <div class="row">
-        <div>
+<div class="container-fluid suplogin" *ngIf="expLab">
+    <div class="container login ">
+        <div class="row">
+            <div class="col-12">
+                <div class="card fondo shadow rounded">
+                  <div class="card-body ">
+                    <h5 class="card-title texto m-2"> Modificar Experiencia</h5>
+
+
+
+
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreE">Nombre de la empresa</label>
+                
+                <!-- Empresa -->
+                <div class="form-group texto m-3">
+                    <label for="nombreE" class="m-2">Modificar Nombre de la empresa</label>
                     <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required>
                 </div>
-                <div class="form-group">
-                    <label for="descripcionE">Descripcion de la tarea</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
+                
+                <!-- posicion -->
+
+                <div class="form-group texto m-3">
+                    <label for="positionE" class="m-2"> Modificar la posicion </label>
+                    <input type="text" class="form-control" id="positionE" name="positionE" [(ngModel)]="expLab.positionE" required>
                 </div>
-                <button class="btn btn-secondary"> Actualizar </button>
+
+
+                <!-- modo -->
+
+
+                <div class="form-group texto m-3">
+                    <label for="modoE"class="m-2">Descripcion de la modalidad de trabajo</label>
+                    <input type="text" class="form-control" id="modoE" name="modoE" [(ngModel)]="expLab.modoE" required>
+                </div>
+
+
+                <!-- actividades  -->
+                <!-- <div class="form-group texto m-3">
+                    <label for="descripcionE" class="m-2">Modificar actividades </label>
+                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
+                </div> -->
+
+
+                <div class="form-group texto m-3">
+                    <label for="descripcionE" class="m-2">Modificar actividades </label>
+                    
+                    <textarea name="descripcionE" id="descripcionE" cols="50" rows="5" type="text" class="form-control" [(ngModel)]="expLab.descripcionE" required></textarea>
+
+                    <!-- <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required> -->
+                </div>
+
+                <!-- inicio -->
+
+                <div class="form-group texto m-3">
+                    <label for="startE" class="m-2">Modificar año de ingreso</label>
+                    <input type="text" class="form-control" id="startE" name="startE" [(ngModel)]="expLab.startE" required>
+                </div>
+
+
+
+
+                <!-- finalizacion -->
+                <div class="form-group texto m-3">
+                    <label for="endE" class="m-2">Modificar año de finalizacion</label>
+                    <input type="text" class="form-control" id="endE" name="endE" [(ngModel)]="expLab.endE" required>
+                </div>
+
+
+
+
+
+                <!-- web -->
+
+
+                <div class="form-group texto m-3">
+                    <label for="webE" class="m-2">Editar la web de la empresa</label>
+                    <input type="text" class="form-control" id="webE" name="webE" [(ngModel)]="expLab.webE" required >
+                </div>
+
+
+
+
+
+                <button class="btn btn-secondary tarjeta"> Actualizar </button>
+
+                
             </form>
+
+
+
+            
+
+
+
+
+
+
         </div>
     </div>
 </div>
+</div>
+</div>
+</div>
+

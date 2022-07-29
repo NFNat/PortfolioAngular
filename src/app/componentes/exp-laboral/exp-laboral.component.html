@@ -22,14 +22,14 @@
                         [src]="experiencia.img"/> -->
                     </div>
         
-                    <div class="col-6 ">
+                    <div class="col-5 ">
                         <h5>{{Experiencia.nombreE}}</h5>
-                        <h6>{{Experiencia.descripcionE}}</h6>
-                        <p>aca va el modo</p>
-                        <p><time>inicio en tiempo</time> - <time>fin</time></p>
+                        <h6>{{Experiencia.positionE}} - {{Experiencia.modoE}}</h6>
+                        <p> {{Experiencia.descripcionE}}</p>
+                        <p><time>{{Experiencia.startE}}</time> - <time>{{Experiencia.endE}}</time></p>
                     </div>
-                    <div class="col-2 align-self-center ">
-                        <button class="btn btn-secondary tarjeta "><a href="#" class="texto">web de la empresa</a></button>
+                    <div class="col-3 align-self-center ">
+                        <button class="btn btn-secondary tarjeta "><a href="http://{{Experiencia.webE}}" target="_blank" class="texto">{{Experiencia.webE}}</a></button>
                     </div>
                     <div class="col-2  ">
                         <div class="row m-2 d-flex " *ngIf="isLogged">

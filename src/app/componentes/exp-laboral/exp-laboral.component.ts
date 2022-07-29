@@ -35,6 +35,7 @@ expe: Experiencia[] =[];
    
   delete(id?: number){
     if(id!= undefined){
+      alert("Seguro de borrar esta experiencia?");
       this.servExperiencia.delete(id).subscribe(
         data => {
           this.cargarExperiencia();
