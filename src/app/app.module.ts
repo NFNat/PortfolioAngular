@@ -21,6 +21,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { interceptorProvider } from './servicio/interceptor-service';
 import { NewExperienciaComponent } from './componentes/exp-laboral/new-experiencia.component';
 import { EditExperienciaComponent } from './componentes/exp-laboral/edit-experiencia.component';
+import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
+import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { EditExperienciaComponent } from './componentes/exp-laboral/edit-experie
     IniciarSesionComponent,
     PortfolioComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent
     
   ],
   imports: [

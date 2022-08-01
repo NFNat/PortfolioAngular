@@ -1,0 +1,80 @@
+<div class="container-fluid suplogin" *ngIf="educacion">
+    <div class="container login ">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card fondo shadow rounded">
+                  <div class="card-body ">
+                    <h5 class="card-title texto m-2"> Editar Nueva Educaicon</h5>
+
+
+
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group texto m-3">
+
+                    <!-- empresa -->
+
+                    <label for="nombreE" class="m-2">Nombre de la Institucion</label>
+                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="educacion.schoolEd" required>
+                </div>
+                
+                <!-- posicion -->
+
+                <div class="form-group texto m-3">
+                    <label for="positionE" class="m-2">Cargar tìtulo</label>
+                    <input type="text" class="form-control" id="positionE" name="positionE" [(ngModel)]="educacion.titleEd" required>
+                </div>
+
+                <!-- modo -->
+
+
+                <div class="form-group texto m-3">
+                    <label for="modoE" class="m-2">Cargar carrera</label>
+                    <input type="text" class="form-control" id="modoE" name="modoE" [(ngModel)]="educacion.careerEd" required>
+                </div>
+
+                <!-- actividades  -->
+
+                <!-- 
+                <div class="form-group texto m-3">
+                    <label for="descripcionE" class="m-2">Cargar las actividades realizadas</label>
+                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
+                </div> -->
+
+                <!-- Año de inicio -->
+
+                <div class="form-group texto m-3">
+                    <label for="startE" class="m-2">Cargar año de inicio</label>
+                    <input type="text" class="form-control" id="startE" name="startE" [(ngModel)]="educacion.startEd" required>
+                </div>
+
+
+                <!-- Año de finalización -->
+
+                <div class="form-group texto m-3">
+                    <label for="endE" class="m-2">Cargar año de finalizacion</label>
+                    <input type="text" class="form-control" id="endE" name="endE" [(ngModel)]="educacion.endEd" required>
+                </div>
+
+
+
+                <!-- Web de la empresa -->
+                <div class="form-group texto m-3">
+                    <label for="webE" class="m-2">Cargar la pagina web de la instiucion</label>
+                    <input type="text" class="form-control" id="webE" name="webE" [(ngModel)]="educacion.webEd" required>
+                </div>
+
+
+               
+
+
+
+                <button class="btn btn-secondary tarjeta"> Agregar </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
