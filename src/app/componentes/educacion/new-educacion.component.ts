@@ -15,6 +15,7 @@ export class NewEducacionComponent implements OnInit {
     startEd: string ="";
     endEd: string ="";
     webEd: string ="";
+    imgEd: string = ";"
 
   constructor(private educacionS: EducacionService, private router: Router) { }
 
@@ -23,7 +24,7 @@ export class NewEducacionComponent implements OnInit {
 
 
   onCreate():void{
-    const educacion = new Educacion(this.schoolEd, this.titleEd, this.careerEd, this.startEd, this.endEd, this.webEd);
+    const educacion = new Educacion(this.schoolEd, this.titleEd, this.careerEd, this.startEd, this.endEd, this.webEd,this.imgEd);
     this.educacionS.save(educacion).subscribe(data =>{
       alert("Educacion  añadida");
       this.router.navigate(['']);

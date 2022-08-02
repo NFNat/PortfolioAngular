@@ -5,7 +5,7 @@
             <div class="col-12">
                 <div class="card fondo shadow rounded">
                   <div class="card-body ">
-                    <h5 class="card-title texto m-2"> Editar Nueva Educaicon</h5>
+                    <h5 class="card-title texto m-2"> Editar Educacion</h5>
 
 
 
@@ -14,23 +14,23 @@
 
                     <!-- empresa -->
 
-                    <label for="nombreE" class="m-2">Nombre de la Institucion</label>
-                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="educacion.schoolEd" required>
+                    <label for="schoolEd" class="m-2">Editar Nombre de la Institucion</label>
+                    <input type="text" class="form-control" id="schoolEd" name="schoolEd" [(ngModel)]="educacion.schoolEd" required>
                 </div>
                 
                 <!-- posicion -->
 
                 <div class="form-group texto m-3">
-                    <label for="positionE" class="m-2">Cargar tìtulo</label>
-                    <input type="text" class="form-control" id="positionE" name="positionE" [(ngModel)]="educacion.titleEd" required>
+                    <label for="titleEd" class="m-2">Editar tìtulo</label>
+                    <input type="text" class="form-control" id="titleEd" name="titleEd" [(ngModel)]="educacion.titleEd" required>
                 </div>
 
                 <!-- modo -->
 
 
                 <div class="form-group texto m-3">
-                    <label for="modoE" class="m-2">Cargar carrera</label>
-                    <input type="text" class="form-control" id="modoE" name="modoE" [(ngModel)]="educacion.careerEd" required>
+                    <label for="careerEd" class="m-2">Editar carrera</label>
+                    <input type="text" class="form-control" id="carrerEd" name="carrerEd" [(ngModel)]="educacion.careerEd" required>
                 </div>
 
                 <!-- actividades  -->
@@ -44,32 +44,33 @@
                 <!-- Año de inicio -->
 
                 <div class="form-group texto m-3">
-                    <label for="startE" class="m-2">Cargar año de inicio</label>
-                    <input type="text" class="form-control" id="startE" name="startE" [(ngModel)]="educacion.startEd" required>
+                    <label for="startEd" class="m-2">Editar año de inicio</label>
+                    <input type="text" class="form-control" id="startEd" name="startEd" [(ngModel)]="educacion.startEd" required>
                 </div>
 
 
                 <!-- Año de finalización -->
 
                 <div class="form-group texto m-3">
-                    <label for="endE" class="m-2">Cargar año de finalizacion</label>
-                    <input type="text" class="form-control" id="endE" name="endE" [(ngModel)]="educacion.endEd" required>
+                    <label for="endEd" class="m-2">Editar año de finalizacion</label>
+                    <input type="text" class="form-control" id="endEd" name="endEd" [(ngModel)]="educacion.endEd" required>
                 </div>
 
 
 
                 <!-- Web de la empresa -->
                 <div class="form-group texto m-3">
-                    <label for="webE" class="m-2">Cargar la pagina web de la instiucion</label>
-                    <input type="text" class="form-control" id="webE" name="webE" [(ngModel)]="educacion.webEd" required>
+                    <label for="webEd" class="m-2">Editar la pagina web de la instiucion</label>
+                    <input type="text" class="form-control" id="webEd" name="webEd" [(ngModel)]="educacion.webEd" required>
+                </div>
+
+                <div class="form-group texto m-3">
+                    <label for="ingEd" class="m-2">Editar la ruta de la imagen</label>
+                    <input type="text" class="form-control" id="imgEd" name="imgEd" [(ngModel)]="educacion.imgEd" required>
                 </div>
 
 
-               
-
-
-
-                <button class="btn btn-secondary tarjeta"> Agregar </button>
+                <button class="btn btn-secondary tarjeta"> modificar </button>
             </form>
         </div>
     </div>

@@ -16,10 +16,10 @@
         
                 <div class="row texto mt-3 d-flex align-items-center" display="flex">
                     <div class="col-2 align-self-center justify-content-center">
-                        aca va la imagen
-                        <!-- <img 
+                        
+                        <img 
                         class="fotoeducacion "
-                        [src]="experiencia.img"/> -->
+                        [src]="Educacion.imgEd"/>
                     </div>
         
                     <div class="col-5 ">
@@ -29,7 +29,7 @@
                         <p><time>{{Educacion.startEd}}</time> - <time>{{Educacion.endEd}}</time></p>
                     </div>
                     <div class="col-3 align-self-center ">
-                        <button class="btn btn-secondary tarjeta "><a href="http://{{Educacion.webEd}}" target="_blank" class="texto">{{Educacion.webEd}}</a></button>
+                        <button class="btn btn-secondary tarjeta "><a href="http://{{Educacion.webEd}}" target="_blank" class="texto">Web Page</a></button>
                     </div>
                     <div class="col-2  ">
                         <div class="row m-2 d-flex " *ngIf="isLogged">

@@ -17,6 +17,7 @@ export class NewExperienciaComponent implements OnInit {
   startE: string = '';
   endE: string = '';
   webE: string = '';
+  imgE: string = '';
 
 
 
@@ -26,7 +27,7 @@ export class NewExperienciaComponent implements OnInit {
   ngOnInit(): void {
   }
   onCreate():void{
-    const expe = new Experiencia(this.nombreE, this.descripcionE, this.positionE, this.modoE, this.startE, this.endE, this.webE);
+    const expe = new Experiencia(this.nombreE, this.descripcionE, this.positionE, this.modoE, this.startE, this.endE, this.webE,this.imgE);
     this.servExperiencia.save(expe).subscribe(data =>{
       alert("experiencia añadida");
       this.router.navigate(['']);

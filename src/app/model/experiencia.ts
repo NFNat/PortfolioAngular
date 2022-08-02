@@ -7,11 +7,12 @@ export class Experiencia {
     startE: string;
     endE: string;
     webE: string;
+    imgE: string;
 
 
 
 
-    constructor(nombreE: string, descripcionE: string, positionE: string, modoE: string, startE: string, endE: string, webE:string){
+    constructor(nombreE: string, descripcionE: string, positionE: string, modoE: string, startE: string, endE: string, webE:string, imgE: string){
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
 
@@ -20,5 +21,6 @@ export class Experiencia {
         this.startE = startE;
         this.endE = endE;
         this.webE =  webE;
+        this.imgE = imgE;
     }
 }
