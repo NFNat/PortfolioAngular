@@ -4,10 +4,13 @@ import { EditEducacionComponent } from './componentes/educacion/edit-educacion.c
 import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
 import { EditExperienciaComponent } from './componentes/exp-laboral/edit-experiencia.component';
 import { NewExperienciaComponent } from './componentes/exp-laboral/new-experiencia.component';
+import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.component';
+import { NewIdiomasComponent } from './componentes/idiomas/new-idiomas.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { EditSkillsComponent } from './componentes/skills/edit-skills.component';
 import { NewSkillsComponent } from './componentes/skills/new-skills.component';
+
 
 const routes: Routes = [
   { path:'portfolio', component:PortfolioComponent },
@@ -17,8 +20,10 @@ const routes: Routes = [
   { path: 'editexp/:id', component:EditExperienciaComponent },
   { path: 'nuevaedu', component:NewEducacionComponent },
   { path: 'editedu/:id', component:EditEducacionComponent },
-  { path: 'nuevaskill', component: NewSkillsComponent},
-  { path: 'editskill/:id', component:EditSkillsComponent}
+  { path: 'nuevaskill', component: NewSkillsComponent },
+  { path: 'editskill/:id', component:EditSkillsComponent },
+  { path:'nuevoidi', component: NewIdiomasComponent },
+  { path: 'editidi/:id' , component:EditIdiomasComponent }
 
 ];
 

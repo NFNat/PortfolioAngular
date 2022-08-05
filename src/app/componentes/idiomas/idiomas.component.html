@@ -2,22 +2,54 @@
 
     <div class="card fondo shadow rounded" >
       <div class="card-body">
-        <h5 class="card-title texto">Languages</h5>
-        <br>
+        <div class="row mb-2"> 
+          <div class="col-8">
+            <h5 class="card-title texto">Languages</h5>
+          </div>
+          <div class="col-4">
 
-        <ul>
-          <li *ngFor="let lengua of lenguasList">
+            <button type="button" class="btn btn-secondary texto tarjeta" routerLink="/nuevoidi"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nuevo Idioma</button>
+        </div>
+
+
+
+
+        </div>
+        
+        
+
+        <ul class="mt-3">
+          <li *ngFor="let Idiomas of idiomas">
        
         <div class="container">
           <div class="row texto">
-            <div class="col-3"> <h5>{{lengua.idioma}}</h5> </div>
-            <div class="col-7">{{lengua.alcance}}  {{lengua.nivel}}</div>
-            <div class="col-2">
-              <div class="progress">
-                <div class="progress-bar w-100  bg-secondary" role="progressbar" attr.aria-valuenow="{{lengua.porc}}" aria-valuemin="0"
-                  aria-valuemax="100">{{lengua.porc}}</div>
+            <div class="row">
+              <div class="col-6">
+                
+              </div>
+              <div class="col-6">
+             
+              </div>
+              
+            </div>
+            <div class="col-3"> <h5>{{Idiomas.idioma}}</h5> </div>
+            <div class="col-7">{{Idiomas.nivel}}</div>
+            <div class="col-1">
+              <div class="m-2" *ngIf="isLogged"><a  routerLink="/editidi/{{Idiomas.id}}"><i class="fa fa-pen  text-secondary"></i></a> 
               </div>
             </div>
+            <div class="col-1">
+            <div class="m-2 "  *ngIf="isLogged" >
+              <a (click)="delete(Idiomas.id)"><i class="fa fa-trash-can text-secondary"></i> </a>
+                </div> 
+              </div>
+
+<!--               
+              <div class="progress">
+                <div class="progress-bar w-100  bg-secondary" role="progressbar" attr.aria-valuenow="{{Idiomas.progressId}}" aria-valuemin="0"
+                  aria-valuemax="100">{{Idiomas.progressId}}</div>
+              </div> -->
+            
           </div>
         </div>
         </li>

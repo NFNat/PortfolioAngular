@@ -1,0 +1,51 @@
+<div class="container-fluid suplogin" *ngIf="idiomas">
+    <div class="container login ">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card fondo shadow rounded">
+                  <div class="card-body ">
+                    <h5 class="card-title texto m-2"> Editar Idioma</h5>
+
+
+
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group texto m-3">
+
+                    <!-- empresa -->
+
+                    <label for="idioma" class="m-2">Editar el idioma</label>
+                    <input type="text" class="form-control" id="idioma" name="idioma" [(ngModel)]="idiomas.idioma" required>
+                </div>
+                
+                <!-- posicion -->
+                
+                <div class="form-group texto m-3">
+                    <label for="nivel" class="m-2">Editar el nivel del idioma</label>
+                    <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="idiomas.nivel" required>
+                </div>
+
+
+
+
+
+
+                <div class="form-group texto m-3">
+                    <label for="progressId" class="m-2">Editar el progreso</label>
+                    <input type="number" class="form-control" id="progressId" name="progressId" [(ngModel)]="idiomas.progressId" required>
+                </div>
+
+                <!-- modo -->
+
+
+
+                <button class="btn btn-secondary tarjeta"> modificar </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+

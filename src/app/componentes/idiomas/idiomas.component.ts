@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PortifolioService } from 'src/app/servicio/portifolio.service';
+import { Idiomas } from 'src/app/model/idiomas';
+import { IdiomasService } from 'src/app/servicio/idiomas.service';
+import { TokenService } from 'src/app/servicio/token.service';
 
 
 @Component({
@@ -8,15 +10,38 @@ import { PortifolioService } from 'src/app/servicio/portifolio.service';
   styleUrls: ['./idiomas.component.scss']
 })
 export class IdiomasComponent implements OnInit {
-  @Input() porc:any;
-  lenguasList:any;
-
-  constructor(private datosPortifolio:PortifolioService) { }
+  //@Input() porc:any;
+  //lenguasList:any;
+idiomas: Idiomas[] = [];
+  constructor(private idiomasServ: IdiomasService, private tokenService: TokenService) { }
+  isLogged = false;
 
   ngOnInit(): void {
-    this.datosPortifolio.obtenerDatos().subscribe(data=>{
-      this.lenguasList=data.idiomas;
-    });
+    this.cargarIdioma();
+    if(this.tokenService.getToken()){
+      this.isLogged= true;
+    } else {
+      this.isLogged = false;
+    }
+  
+  }
+
+  cargarIdioma():void{
+    this.idiomasServ.lista().subscribe(
+      data=> {this.idiomas = data;})
+  }
+
+  delete(id?:number){
+    if(id!= undefined){
+      alert("Seguro de borrar este Idioma?");
+      this.idiomasServ.delete(id).subscribe(
+        data=> {
+          this.cargarIdioma();
+        }, err => {
+          alert("no se pudo eliminar el idioma")
+        }
+      )
+    }
   }
 
 }
