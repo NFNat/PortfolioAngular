@@ -1,24 +1,46 @@
-<div class="container mb-3">
-<div class="col">
+<div class="container-fluid mb-3">
+
     <div class="card fondo shadow rounded" >
       <div class="card-body">
-        <h5 class="card-title texto1">My Skills</h5>
-        <div class="container">
-          <div class="row">
+        <div class="row">
+          <div class="col-6">
+            <h5 class="card-title texto1">My Skills</h5> 
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-secondary texto1 tarjeta" routerLink="/nuevaskill" *ngIf="isLogged">
+              <i class="fa-solid fa-folder-plus"></i> Nueva Skill
+            </button>
+          </div>
+        </div>
 
-            <!-- html -->
-            <div class="col">
-              <div class="card tarjeta">
-                <div class="card-body">
+        <div class="row">
+            <ul class="list-group list-group-horizontal row  row-cols-auto m-2">
+              <li class="list-group-item m-2 tarjeta"  *ngFor="let Skills of skills"> 
+                <div class="col">
                   <div class="container p-0">
-                    
                     <div class="row">
                       <div class="col-12 text-center">
+                        <div >
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="m-2" *ngIf="isLogged"><a  routerLink="/editskill/{{Skills.id}}"><i class="fa fa-pen  text-secondary"></i></a> 
+                              </div>
+                            </div>
+                            <div class="col-6">
+                           <div class="m-2 "  *ngIf="isLogged" >
+                            <a (click)="delete(Skills.id)"><i class="fa fa-trash-can text-secondary"></i> </a>
+                              </div> 
+                            </div>
+                            <div class="row">
+                            </div>
+                          </div>
+                      </div>
+
                         <circle-progress
-                                [percent]="53"
+                                [percent]="Skills.progress" 
                                 [radius]="40"
                                 [showSubtitle]="false"
-                                [imageSrc]="'../../../assets/html.png'"
+                                [imageSrc]="Skills.imgSkill"
                                 [showImage]="true"
                                 [imageHeight]="40"
                                 [imageWidth]="40"
@@ -32,134 +54,17 @@
                               ></circle-progress>
                         
                       </div>
-                      <div class="col-12 texto text-center">HTML 5</div>
-                      
+                      <div class="col-12 texto1 text-center">{{Skills.nameSkill}}</div>
                     </div>
                   </div>
-                </div>
-              </div>
             </div>
-            <!-- Agregar con la BD CCS3, JS, TS, Bootstrap, Angular , GIT, Jva, SpringBoot -->
-
-            
-            <!-- CSS -->
-            <div class="col">
-              <div class="card tarjeta">
-                <div class="card-body">
-                  <div class="container p-0">
-                    <div class="row  text-center">
-                      <i class="fa-brands fa-css3 fa-3x"></i>
-                      <div class="col-12">CSS3</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 ">
-                        <div class="progress">
-                          <div class="progress-bar w-50 bg-secondary" role="progressbar" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- JS -->
-            <div class="col">
-              <div class="card tarjeta">
-                <div class="card-body">
-                  <div class="container p-0">
-                    <div class="row text-center">
-                      <i class="fa-brands fa-js fa-3x"></i>
-                      <div class="col-12">JS</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="progress">
-                          <div class="progress-bar w-25 bg-secondary" role="progressbar " aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- bootstrap 5 -->
-            <div class="col">
-                <div class="card tarjeta">
-                  <div class="card-body">
-                    <div class="container p-0">
-                      <div class="row text-center">
-                        <i class="fa-brands fa-bootstrap fa-3x"></i>
-                        <div class="col">Bootstrap</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 ">
-                          <div class="progress">
-                            <div class="progress-bar w-50 bg-secondary" role="progressbar" aria-valuenow="75"
-                              aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Angular-->
-              <div class="col">
-                <div class="card tarjeta">
-                  <div class="card-body">
-                    <div class="container p-0">
-                      <div class="row text-center">
-                        <i class="fa-brands fa-angular fa-3x"></i>
-                        <div class="col">Angular</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 ">
-                          <div class="progress">
-                            <div class="progress-bar w-25 bg-secondary" role="progressbar" aria-valuenow="75"
-                              aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- GIT-->
-              <div class="col">
-                <div class="card tarjeta" >
-                  <div class="card-body">
-                    <div class="container p-0">
-                      <div class="row text-center">
-                        <i class="fa-brands fa-git fa-3x"></i>
-                        <div class="col">GIT</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 ">
-                          <div class="progress">
-                            <div class="progress-bar w-25 bg-secondary" role="progressbar" aria-valuenow="75"
-                              aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
+
 
 
   

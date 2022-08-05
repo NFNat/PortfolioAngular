@@ -23,6 +23,9 @@ import { NewExperienciaComponent } from './componentes/exp-laboral/new-experienc
 import { EditExperienciaComponent } from './componentes/exp-laboral/edit-experiencia.component';
 import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
+import { EditSkillsComponent } from './componentes/skills/edit-skills.component';
+import { NewSkillsComponent } from './componentes/skills/new-skills.component';
+
 
 
 @NgModule({
@@ -43,7 +46,10 @@ import { EditEducacionComponent } from './componentes/educacion/edit-educacion.c
     NewExperienciaComponent,
     EditExperienciaComponent,
     NewEducacionComponent,
-    EditEducacionComponent
+    EditEducacionComponent,
+    EditSkillsComponent,
+    NewSkillsComponent,
+  
     
   ],
   imports: [

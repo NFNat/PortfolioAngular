@@ -1,0 +1,45 @@
+<div class="container-fluid suplogin" *ngIf="skills">
+    <div class="container login ">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card fondo shadow rounded">
+                  <div class="card-body ">
+                    <h5 class="card-title texto m-2"> Editar Skills</h5>
+
+
+
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group texto m-3">
+
+                    <!-- empresa -->
+
+                    <label for="nameSkill" class="m-2">Editar nombre Skill</label>
+                    <input type="text" class="form-control" id="nameSkill" name="nameSkill" [(ngModel)]="skills.nameSkill" required>
+                </div>
+                
+                <!-- posicion -->
+
+                <div class="form-group texto m-3">
+                    <label for="progress" class="m-2">Editar el progreso</label>
+                    <input type="number" class="form-control" id="progress" name="progress" [(ngModel)]="skills.progress" required>
+                </div>
+
+                <!-- modo -->
+
+
+                <div class="form-group texto m-3">
+                    <label for="imgSkill" class="m-2">Editar la ruta de la imagen</label>
+                    <input type="text" class="imgSkill" id="imgSkill" name="imgSkill" [(ngModel)]="skills.imgSkill" required>
+                </div>
+
+
+                <button class="btn btn-secondary tarjeta"> modificar </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>

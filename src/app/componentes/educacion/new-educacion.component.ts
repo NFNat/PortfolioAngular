@@ -15,7 +15,7 @@ export class NewEducacionComponent implements OnInit {
     startEd: string ="";
     endEd: string ="";
     webEd: string ="";
-    imgEd: string = ";"
+    imgEd: string = "";
 
   constructor(private educacionS: EducacionService, private router: Router) { }
 
