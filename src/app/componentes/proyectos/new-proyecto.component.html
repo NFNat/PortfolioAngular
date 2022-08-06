@@ -1,0 +1,46 @@
+<div class="container-fluid suplogin">
+    <div class="container login ">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card fondo shadow rounded">
+                  <div class="card-body ">
+                    <h5 class="card-title texto m-2"> Cargar Nueva Skill</h5>
+
+
+
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group texto m-3">
+
+                    <!-- empresa -->
+
+                    <label for="nombreProy" class="m-2">Cargar nombre del Proyecto</label>
+                    <input type="text" class="form-control" id="nombreProy" name="nombreProy" [(ngModel)]="nombreProy" required>
+                </div>
+                
+                <!-- posicion -->
+
+                <div class="form-group texto m-3">
+                    <label for="descProy" class="m-2">Cargar la Descripcion</label>
+                    <input type="text" class="form-control" id="descProy" name="descProy" [(ngModel)]="descProy" required>
+                </div>
+
+                <!-- modo -->
+
+                <div class="form-group texto m-3">
+                    <label for="webProy" class="m-2">Cargar la ruta de la imagen</label>
+                    <input type="text" class="form-control" id="webProy" name="webProy" [(ngModel)]="webProy" required>
+                </div>
+
+
+                <button class="btn btn-secondary tarjeta"> Agregar </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+

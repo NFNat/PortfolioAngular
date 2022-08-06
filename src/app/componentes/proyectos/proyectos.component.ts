@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortifolioService } from 'src/app/servicio/portifolio.service';
+import { Proyectos } from 'src/app/model/proyectos';
+import { ProyectosService } from 'src/app/servicio/proyectos.service';
+import { TokenService } from 'src/app/servicio/token.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -7,15 +9,38 @@ import { PortifolioService } from 'src/app/servicio/portifolio.service';
   styleUrls: ['./proyectos.component.scss']
 })
 export class ProyectosComponent implements OnInit {
-  proyectosList:any;
+  proyectos: Proyectos[] = [];
 
 
-  constructor(private datosPortifolio:PortifolioService) { }
+  constructor(private proyectoServ: ProyectosService, private tokenService: TokenService) { }
+  isLogged = false;
+
 
   ngOnInit(): void {
-    this.datosPortifolio.obtenerDatos().subscribe(data=>{
-      this.proyectosList=data.projects;
-    });
-  }
+    this.cargarProyecto();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+    }
 
+    cargarProyecto(): void{
+      this.proyectoServ.lista().subscribe(
+        data => {this.proyectos = data;})
+    }
+
+    delete(id?:number){
+      if(id!=undefined){
+        alert("Seguro de borrar este proyecto?"); // Agregar boton de cancelar
+        this.proyectoServ.delete(id).subscribe(
+          data => {
+            this.cargarProyecto();
+          }, err => {
+            alert("No se pudo borrar el proyecto")
+          }
+        )
+
+    }
+  }
 }

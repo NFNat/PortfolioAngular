@@ -27,6 +27,8 @@ import { EditSkillsComponent } from './componentes/skills/edit-skills.component'
 import { NewSkillsComponent } from './componentes/skills/new-skills.component';
 import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.component';
 import { NewIdiomasComponent } from './componentes/idiomas/new-idiomas.component';
+import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 
 
 
@@ -53,6 +55,8 @@ import { NewIdiomasComponent } from './componentes/idiomas/new-idiomas.component
     NewSkillsComponent,
     EditIdiomasComponent,
     NewIdiomasComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
   
     
   ],

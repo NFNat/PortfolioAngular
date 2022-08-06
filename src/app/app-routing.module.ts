@@ -8,6 +8,8 @@ import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.compone
 import { NewIdiomasComponent } from './componentes/idiomas/new-idiomas.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
+import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
 import { EditSkillsComponent } from './componentes/skills/edit-skills.component';
 import { NewSkillsComponent } from './componentes/skills/new-skills.component';
 
@@ -23,7 +25,9 @@ const routes: Routes = [
   { path: 'nuevaskill', component: NewSkillsComponent },
   { path: 'editskill/:id', component:EditSkillsComponent },
   { path:'nuevoidi', component: NewIdiomasComponent },
-  { path: 'editidi/:id' , component:EditIdiomasComponent }
+  { path: 'editidi/:id' , component:EditIdiomasComponent },
+  { path: 'nuevoproyecto', component: NewProyectoComponent },
+  { path: 'editproyecto/:id', component: EditProyectoComponent}
 
 ];
 
