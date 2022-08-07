@@ -29,6 +29,8 @@ import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.compone
 import { NewIdiomasComponent } from './componentes/idiomas/new-idiomas.component';
 import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
+import { EditAboutComponent } from './componentes/about/edit-about.component';
+import { NewAboutComponent } from './componentes/about/new-about.component';
 
 
 
@@ -57,6 +59,8 @@ import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.com
     NewIdiomasComponent,
     NewProyectoComponent,
     EditProyectoComponent,
+    EditAboutComponent,
+    NewAboutComponent,
   
     
   ],

@@ -1,0 +1,35 @@
+<div class="container-fluid suplogin">
+    <div class="container login ">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card fondo shadow rounded">
+                  <div class="card-body ">
+                    <h5 class="card-title texto m-2"> Cargar Nueva About</h5>
+
+
+
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group texto m-3">
+
+                    
+
+                    <label for="about" class="m-2">Cargar una breve reseña que te describa</label>
+                    <textarea name="about" id="about" cols="30" rows="5" type="text" class="form-control" [(ngModel)]="about" required></textarea>
+                    <!-- <input type="text" class="form-control" id="about" name="about" [(ngModel)]="about" required> -->
+                </div>
+                
+              
+
+
+
+                <button class="btn btn-secondary tarjeta"> Agregar </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+

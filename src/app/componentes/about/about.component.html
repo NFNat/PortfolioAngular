@@ -4,24 +4,64 @@
       <div class="row texto  "display="flex">
         <div class="col-11">
           <div class="card-body"> 
-            <h5 class="card-title">Acerca de</h5> 
-            <h6 class="card-subtitle text-muted">About me</h6>
+            <div class="row mb-2"> 
+              <div class="col-8">
+                <h5 class="card-title texto">Acerca de</h5>
+              </div>
+              <div class="col-4">
+    
+                <button type="button" class="btn btn-secondary texto tarjeta" routerLink="/nuevoabout"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nuevo</button>
+            </div>
+
+            <ul class="mt-3">
+              <li *ngFor="let About of about">
+                <div class="row">
+
+                  <div class="col-10">
+
+                    <div class="row texto   m-2 mb-4">
+                      <div class="col">
+                        <p class="card-text">{{About.about}}</p>
+                      </div>
+                    </div>
+                   </div>
+                  <div class="col-2">
+                      <div class="row m-2 d-flex "  *ngIf="isLogged">
+                        <button class="btn btn-secondary texto tarjeta  " routerLink="/editabout/{{About.id}}">
+                          <i class="fa fa-pen  text-secondary"></i>Editar</button>
+                        <!-- <a routerLink="/editabout/{{About.id}}"></a> -->
+                    </div>
+                    
+                      <div class="row m-2 d-flex"*ngIf="isLogged">
+                        <button class="btn btn-secondary texto tarjeta  " (click)="delete(About.id)"> 
+                          <i class="fa fa-trash-can text-secondary"></i> Borrar</button>
+                      </div>
+                  </div>
+                </div>
+          </li>
+        </ul>
+
+      </div>
+
+
+            <!-- <h5 class="card-title">Acerca de</h5>  -->
+            
       </div>
         
       </div>
        <!-- <div class="col-1 " ><div class="btn-edit text-end m-2"><a href="#" (click)="editAbout()"> <i class="fa fa-pen text-secondary"></i></a></div></div> --> 
-       <div class="col-1 " ><div class="btn-edit text-end m-2"><a href="#"> <i class="fa fa-pen text-secondary"></i></a></div></div>
+       <!-- <div class="col-1 " ><div class="btn-edit text-end m-2"><a href="#"> <i class="fa fa-pen text-secondary"></i></a></div></div> -->
 
 
 
        
-
+<!-- 
     </div>
     <div class="row texto   m-2 mb-4">
       <div class="col">
     <p class="card-text">{{persona.about}}</p>
   </div>
-  
+   -->
   
 
 
