@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ServExperienciaService } from 'src/app/servicio/serv-experiencia.service';
+import { TokenService } from 'src/app/servicio/token.service';
 
 @Component({
   selector: 'app-edit-experiencia',
@@ -12,10 +13,26 @@ export class EditExperienciaComponent implements OnInit {
   expLab : Experiencia = null;
 
 
-  constructor(private servExperiencia: ServExperienciaService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(
+    private servExperiencia: ServExperienciaService, 
+    private activatedRouter: ActivatedRoute, 
+    private router: Router,
+    private tokenService: TokenService
+    ) { }
+    
+    isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+    if (this.isLogged) {
+
+
     this.servExperiencia.detail(id).subscribe(
       data => {
         this.expLab=data;
@@ -24,7 +41,13 @@ export class EditExperienciaComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+  } else {
+    alert("No autorizado")
+    this.router.navigate(['portfolio']);
+
   }
+
+}
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
