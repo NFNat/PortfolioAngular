@@ -6,7 +6,7 @@
           <div class="card-body"> 
             <div class="row mb-2"> 
               <div class="col-8">
-                <h5 class="card-title texto">Acerca de</h5>
+                <h5 class="card-title texto1 mx-3">Acerca de</h5>
               </div>
               <div class="col-4">
     
@@ -28,13 +28,13 @@
                   <div class="col-2">
                       <div class="row m-2 d-flex "  *ngIf="isLogged">
                         <button class="btn btn-secondary texto tarjeta  " routerLink="/editabout/{{About.id}}">
-                          <i class="fa fa-pen  text-secondary"></i>Editar</button>
+                          <i class="fa fa-pen "></i> Editar</button>
                         <!-- <a routerLink="/editabout/{{About.id}}"></a> -->
                     </div>
                     
                       <div class="row m-2 d-flex"*ngIf="isLogged">
                         <button class="btn btn-secondary texto tarjeta  " (click)="delete(About.id)"> 
-                          <i class="fa fa-trash-can text-secondary"></i> Borrar</button>
+                          <i class="fa fa-trash-can "></i> Borrar</button>
                       </div>
                   </div>
                 </div>
@@ -44,24 +44,12 @@
       </div>
 
 
-            <!-- <h5 class="card-title">Acerca de</h5>  -->
+        
             
       </div>
         
       </div>
-       <!-- <div class="col-1 " ><div class="btn-edit text-end m-2"><a href="#" (click)="editAbout()"> <i class="fa fa-pen text-secondary"></i></a></div></div> --> 
-       <!-- <div class="col-1 " ><div class="btn-edit text-end m-2"><a href="#"> <i class="fa fa-pen text-secondary"></i></a></div></div> -->
-
-
-
        
-<!-- 
-    </div>
-    <div class="row texto   m-2 mb-4">
-      <div class="col">
-    <p class="card-text">{{persona.about}}</p>
-  </div>
-   -->
   
 
 

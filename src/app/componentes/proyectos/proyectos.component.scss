@@ -10,6 +10,13 @@ a {
 .tarjeta {
     background-color: rgba(112, 60, 108, 0.5);
 }
+
+
+.tarjeta1{
+    background-color: rgba(112, 60, 108, 0.5);
+    border-radius: 45px;
+
+}
 .project {
 
     transition: transform 0.2s ease;
@@ -20,10 +27,17 @@ a {
   }
   
   .texto {
-    color: #827397;
-    font-weight: bold;
-  }
-  
+    color: #AF9120;
+        font-weight: bold;
+      };
+    
+
+      .texto1 {
+        color: #AF9120;
+            //font-weight: bold;
+          };
+        
+
   li {
     list-style:none;
     display: inline;

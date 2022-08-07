@@ -9,7 +9,7 @@
           </div>
           <div class="col-6">
             <button type="button" class="btn btn-secondary texto tarjeta" routerLink="/nuevoproyecto" *ngIf="isLogged">
-              <i class="fa-solid fa-folder-plus texto"></i> Nuevo Proyecto
+              <i class="fa-solid fa-folder-plus texto1"></i> Nuevo Proyecto
             </button>
           </div>
         </div>
@@ -18,7 +18,7 @@
 
         <div class="row">
           <ul class="list-group list-group-horizontal row  row-cols-auto m-2">
-            <li class="list-group-item m-2 tarjeta" *ngFor="let Proyectos of proyectos">
+            <li class="list-group-item m-2 tarjeta1" *ngFor="let Proyectos of proyectos">
               <div class="col">
                 <div class="container p-0">
                   <div class="row">
@@ -27,24 +27,24 @@
                         <div class="row">
                           <div class="col-6">
                             <div class="m-2" *ngIf="isLogged"><a routerLink="/editproyecto/{{Proyectos.id}}"><i
-                                  class="fa fa-pen  text-secondary"></i></a>
+                                  class="fa fa-pen  texto1"></i></a>
                             </div>
                           </div>
                           <div class="col-6">
                             <div class="m-2 " *ngIf="isLogged">
-                              <a (click)="delete(Proyectos.id)"><i class="fa fa-trash-can text-secondary"></i> </a>
+                              <a (click)="delete(Proyectos.id)"><i class="fa fa-trash-can texto1"></i> </a>
                             </div>
                           </div>
                          
                         </div>
                       </div>
                       <div class="col-12 texto text-center">{{Proyectos.nombreProy}}</div>
-                      <div class="col-12 texto text-center">{{Proyectos.descProy}}</div>
+                      <div class="col-12 texto1 text-center">{{Proyectos.descProy}}</div>
                       
                           
 
                           <button type="button" class="btn tarjeta "><a href="http://{{Proyectos.webProy}}"
-                              target="_blank" class="texto">
+                              target="_blank" class="texto1">
                               Web Page
                             </a>
                           </button>

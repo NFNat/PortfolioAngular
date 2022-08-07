@@ -23,12 +23,12 @@
                         <div >
                           <div class="row">
                             <div class="col-6">
-                              <div class="m-2" *ngIf="isLogged"><a  routerLink="/editskill/{{Skills.id}}"><i class="fa fa-pen  text-secondary"></i></a> 
+                              <div class="m-2" *ngIf="isLogged"><a  routerLink="/editskill/{{Skills.id}}"><i class="fa fa-pen  texto1"></i></a> 
                               </div>
                             </div>
                             <div class="col-6">
                            <div class="m-2 "  *ngIf="isLogged" >
-                            <a (click)="delete(Skills.id)"><i class="fa fa-trash-can text-secondary"></i> </a>
+                            <a (click)="delete(Skills.id)"><i class="fa fa-trash-can texto1"></i> </a>
                               </div> 
                             </div>
                             
@@ -46,14 +46,14 @@
                                 [showUnits]="false"
                                 [outerStrokeWidth]="7"
                                 [innerStrokeWidth]="3"
-                                [outerStrokeColor]="'#bd792c'"
+                                [outerStrokeColor]="'#AF9120'"
                                 [innerStrokeColor]="'#9e7c99'"
                                 [animation]="true"
                                 [animationDuration]="600"
                               ></circle-progress>
                         
                       </div>
-                      <div class="col-12 texto1 text-center">{{Skills.nameSkill}}</div>
+                      <div class="col-12 texto text-center">{{Skills.nameSkill}}</div>
                     </div>
                   </div>
             </div>

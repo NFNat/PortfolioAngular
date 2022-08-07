@@ -7,7 +7,7 @@
             </div>
             <div class="col-lg-4 p-2">
 
-            <button type="button" class="btn btn-secondary texto tarjeta" routerLink="/nuevaexp"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nueva Experiencia</button>
+            <button type="button" class="btn btn-secondary texto  tarjeta" routerLink="/nuevaexp"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nueva Experiencia</button>
         </div>
         </div>
        <div class="mx-5">
@@ -38,12 +38,12 @@
                         <div class="row m-2 d-flex " *ngIf="isLogged">
 
                             <button class="btn btn-secondary texto tarjeta  " routerLink="/editexp/{{Experiencia.id}}">
-                                <i class="fa fa-pen  text-secondary"></i>  Editar</button>
+                                <i class="fa fa-pen  texto"></i>  Editar</button>
                             </div>
                             
                         <div class="row m-2 "  *ngIf="isLogged" >
                             <button class="btn btn-secondary texto tarjeta" (click)="delete(Experiencia.id)">
-                                <i class="fa fa-trash-can text-secondary"></i>  Borrar</button>
+                                <i class="fa fa-trash-can texto"></i>  Borrar</button>
                             
                             </div>
                     </div>
