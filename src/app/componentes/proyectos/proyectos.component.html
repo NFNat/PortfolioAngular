@@ -8,7 +8,7 @@
             <h5 class="card-title texto">Proyectos</h5>
           </div>
           <div class="col-6">
-            <button type="button" class="btn btn-secondary texto tarjeta" routerLink="/nuevoproyecto" *ngIf="isLogged">
+            <button type="button" class="btn texto1 tarjeta" routerLink="/nuevoproyecto" *ngIf="isLogged">
               <i class="fa-solid fa-folder-plus texto1"></i> Nuevo Proyecto
             </button>
           </div>
@@ -31,9 +31,34 @@
                             </div>
                           </div>
                           <div class="col-6">
-                            <div class="m-2 " *ngIf="isLogged">
-                              <a (click)="delete(Proyectos.id)"><i class="fa fa-trash-can texto1"></i> </a>
+                           
+                            <div class="m-2 " *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#borre" ><i class="fa fa-trash-can texto1"></i> 
+                              <div class="modal fade" id="borre" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+                                <div class="modal-dialog modal-dialog-centered">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="modalTitle"> Eliminar Proyecto</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>Seguro de eliminar el Proyecto {{Proyectos.nombreProy}}</p>
+    
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn tarjeta" data-bs-dismiss="modal">Volver</button>
+                                      <button type="button" class="btn btn-danger" (click)="delete(Proyectos.id)">Eliminar</button>
+                                      <a (click)="delete(Proyectos.id)"><i class="fa fa-trash-can texto1"></i> </a>
+                                    </div>                                        
+                                  </div>
+                                </div>                                
+                              </div>
+
+
+
+
+                              
                             </div>
+
                           </div>
                          
                         </div>
@@ -48,6 +73,42 @@
                               Web Page
                             </a>
                           </button>
+
+                          <!-- borrar hasta aca -->
+
+
+                          <!-- <button type="button" class="btn tarjeta texto m-1" data-bs-toggle="modal" data-bs-target="#borre" > modal</button>
+
+                          <div class="modal fade" id="borre" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="modalTitle"> Eliminar Proyecto</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+
+                                </div>
+                                <div class="modal-body">
+                                  <p>Seguro de eliminar el Proyecto {{Proyectos.nombreProy}}</p>
+
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn tarjeta" data-bs-dismiss="modal">Volver</button>
+                                  <button type="button" class="btn btn-danger" (click)="delete(Proyectos.id)">Eliminar</button>
+
+
+                                </div>
+
+                              </div>
+                            </div>
+                            
+                          </div> -->
+
+
+
+
+
+
+
                         
 
                     </div>

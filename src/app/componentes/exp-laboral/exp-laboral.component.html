@@ -7,7 +7,7 @@
             </div>
             <div class="col-lg-4 p-2">
 
-            <button type="button" class="btn btn-secondary texto  tarjeta" routerLink="/nuevaexp"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nueva Experiencia</button>
+            <button type="button" class="btn  texto1  tarjeta" routerLink="/nuevaexp"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nueva Experiencia</button>
         </div>
         </div>
        <div class="mx-5">
@@ -25,11 +25,11 @@
                     <div class="col-5 ">
                         <h5>{{Experiencia.nombreE}}</h5>
                         <h6>{{Experiencia.positionE}} - {{Experiencia.modoE}}</h6>
-                        <p> {{Experiencia.descripcionE}}</p>
-                        <p><time>{{Experiencia.startE}}</time> - <time>{{Experiencia.endE}}</time></p>
+                        <p class="texto1"> {{Experiencia.descripcionE}}</p>
+                        <p class="texto1"><time>{{Experiencia.startE}}</time> - <time>{{Experiencia.endE}}</time></p>
                     </div>
                     <div class="col-3 align-self-center ">
-                        <button class="btn btn-secondary tarjeta "><a href="http://{{Experiencia.webE}}" target="_blank" class="texto">Web Page</a></button>
+                        <button class="btn  tarjeta "><a href="http://{{Experiencia.webE}}" target="_blank" class="texto1">Web Page</a></button>
                         
 
                     </div>
@@ -37,13 +37,13 @@
                     <div class="col-2  ">
                         <div class="row m-2 d-flex " *ngIf="isLogged">
 
-                            <button class="btn btn-secondary texto tarjeta  " routerLink="/editexp/{{Experiencia.id}}">
-                                <i class="fa fa-pen  texto"></i>  Editar</button>
+                            <button class="btn  texto1 tarjeta  " routerLink="/editexp/{{Experiencia.id}}">
+                                <i class="fa fa-pen  texto1"></i>  Editar</button>
                             </div>
                             
                         <div class="row m-2 "  *ngIf="isLogged" >
-                            <button class="btn btn-secondary texto tarjeta" (click)="delete(Experiencia.id)">
-                                <i class="fa fa-trash-can texto"></i>  Borrar</button>
+                            <button class="btn  texto1 tarjeta" (click)="delete(Experiencia.id)">
+                                <i class="fa fa-trash-can texto1"></i>  Borrar</button>
                             
                             </div>
                     </div>

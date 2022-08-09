@@ -3,6 +3,9 @@ import { Proyectos } from 'src/app/model/proyectos';
 import { ProyectosService } from 'src/app/servicio/proyectos.service';
 import { TokenService } from 'src/app/servicio/token.service';
 
+
+
+
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
@@ -32,7 +35,7 @@ export class ProyectosComponent implements OnInit {
 
     delete(id?:number){
       if(id!=undefined){
-        alert("Seguro de borrar este proyecto?"); // Agregar boton de cancelar
+       // alert("Seguro de borrar este proyecto?"); // Agregar boton de cancelar
         this.proyectoServ.delete(id).subscribe(
           data => {
             this.cargarProyecto();

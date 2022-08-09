@@ -32,8 +32,13 @@ idiomas: Idiomas[] = [];
   }
 
   delete(id?:number){
+    if(confirm("Desea eliminar?")==true){
+
+
     if(id!= undefined){
-      alert("Seguro de borrar este Idioma?");
+
+      
+        //alert("Seguro de borrar este Idioma?");
       this.idiomasServ.delete(id).subscribe(
         data=> {
           this.cargarIdioma();
@@ -41,7 +46,11 @@ idiomas: Idiomas[] = [];
           alert("no se pudo eliminar el idioma")
         }
       )
-    }
+    } 
+    }else{
+      alert("cancelado")
+      }
+      
   }
 
 }

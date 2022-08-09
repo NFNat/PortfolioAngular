@@ -7,7 +7,7 @@
             </div>
             <div class="col-lg-4 p-2">
 
-            <button type="button" class="btn btn-secondary texto1 tarjeta" routerLink="/nuevaedu"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nueva Educacion</button>
+            <button type="button" class="btn  texto1 tarjeta" routerLink="/nuevaedu"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nueva Educacion</button>
         </div>
         </div>
        <div class="mx-5">
@@ -29,17 +29,17 @@
                         <p><time>{{Educacion.startEd}}</time> - <time>{{Educacion.endEd}}</time></p>
                     </div>
                     <div class="col-3 align-self-center ">
-                        <button class="btn btn-secondary tarjeta "><a href="http://{{Educacion.webEd}}" target="_blank" class="texto1">Web Page</a></button>
+                        <button class="btn  tarjeta "><a href="http://{{Educacion.webEd}}" target="_blank" class="texto1">Web Page</a></button>
                     </div>
                     <div class="col-2  ">
                         <div class="row m-2 d-flex " *ngIf="isLogged">
 
-                            <button class="btn btn-secondary texto1 tarjeta  " routerLink="/editedu/{{Educacion.id}}">
+                            <button class="btn  texto1 tarjeta  " routerLink="/editedu/{{Educacion.id}}">
                                 <i class="fa fa-pen  texto1"></i>  Editar</button>
                             </div>
                             
                         <div class="row m-2 "  *ngIf="isLogged" >
-                            <button class="btn btn-secondary texto1 tarjeta" (click)="delete(Educacion.id)">
+                            <button class="btn  texto1 tarjeta" (click)="delete(Educacion.id)">
                                 <i class="fa fa-trash-can texto1"></i>  Borrar</button>
                             
                             </div>
