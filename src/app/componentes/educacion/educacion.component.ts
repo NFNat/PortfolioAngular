@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/servicio/educacion.service';
 import { TokenService } from 'src/app/servicio/token.service';
-//import { PortifolioService } from 'src/app/servicio/portifolio.service';
 
 @Component({
   selector: 'app-educacion',
@@ -10,12 +9,8 @@ import { TokenService } from 'src/app/servicio/token.service';
   styleUrls: ['./educacion.component.scss']
 })
 export class EducacionComponent implements OnInit {
- // educacionList:any;
 
  educacion: Educacion[] =[];
- 
-
-
 
  constructor(private educacionS: EducacionService, private tokenService: TokenService) { }
  isLogged = false;
@@ -37,8 +32,11 @@ export class EducacionComponent implements OnInit {
   }
    
   delete(id?: number){
+    if(confirm("Desea eliminar?")==true){
+
+
     if(id!= undefined){
-      alert("Seguro de borrar esta educacion?"); // ver de poner un boton que sea cancelar
+      
       this.educacionS.delete(id).subscribe(
         data => {
           this.cargarEducacion();
@@ -48,16 +46,11 @@ export class EducacionComponent implements OnInit {
       )
     }
 
-  }
+  }else{
+    alert("cancelado")
+    }      
+}
 
 
-
-  // constructor(private datosPortifolio:PortifolioService) { }
-
-  // ngOnInit(): void {
-  //   this.datosPortifolio.obtenerDatos().subscribe(data =>{
-  //     this.educacionList=data.education;
-  //   });
-  // }
 
 }

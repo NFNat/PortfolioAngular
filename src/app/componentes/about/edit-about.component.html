@@ -4,32 +4,34 @@
 
             <div class="col-12">
                 <div class="card fondo shadow rounded">
-                  <div class="card-body ">
-                    <h5 class="card-title texto m-2"> Editar About</h5>
-
-
-
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group texto m-3">
-
-                    <!-- empresa -->
-
-                    <label for="about" class="m-2">Editar About</label>
-
-                    <textarea name="about" id="about" cols="50" rows="5" type="text" class="form-control" [(ngModel)]="about.about" required></textarea>
-
-
-                    
+                    <div class="card-body ">
+                        <h5 class="card-title texto m-2"> Editar About</h5>
+            
+            
+            
+                        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                            <div class="form-group texto m-3">
+            
+                                      
+                                <label for="about" class="m-2">Editar About</label>
+            
+                                <textarea name="about" id="about" cols="50" rows="5" type="text" class="form-control"
+                                    [(ngModel)]="about.about" required></textarea>
+                                   
+            
+            
+                            </div>
+            
+                            <button class="btn  texto1 tarjeta"> modificar </button>
+                               
+                          
+            
+            
+            
+                        </form>
+                    </div>
                 </div>
-                
-                
-
-
-                <button class="btn btn-secondary tarjeta"> modificar </button>
-            </form>
-        </div>
-    </div>
-</div>
+            </div>
 
 </div>
 </div>

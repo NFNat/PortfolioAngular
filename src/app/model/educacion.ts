@@ -18,3 +18,4 @@ export class Educacion {
     this.imgEd= imgEd;
     }
 }
+

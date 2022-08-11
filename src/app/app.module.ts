@@ -31,6 +31,9 @@ import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.compo
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 import { EditAboutComponent } from './componentes/about/edit-about.component';
 import { NewAboutComponent } from './componentes/about/new-about.component';
+import { DatosComponent } from './componentes/datos/datos.component';
+import { EditDatosComponent } from './componentes/datos/edit-datos.component';
+import { NewDatosComponent } from './componentes/datos/new-datos.component';
 
 
 
@@ -61,6 +64,9 @@ import { NewAboutComponent } from './componentes/about/new-about.component';
     EditProyectoComponent,
     EditAboutComponent,
     NewAboutComponent,
+    DatosComponent,
+    EditDatosComponent,
+    NewDatosComponent,
   
     
   ],

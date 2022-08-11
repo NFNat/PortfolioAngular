@@ -33,8 +33,9 @@ export class SkillsComponent implements OnInit {
   }
 
   delete(id?:number){
+    if(confirm("Desea eliminar?")==true){
+
     if(id!=undefined){
-      alert("Seguro de borrar esta Skill?"); // Agregar boton de cancelar
       this.skillsServ.delete(id).subscribe(
         data => {
           this.cargarSkill();
@@ -44,5 +45,7 @@ export class SkillsComponent implements OnInit {
       )
     }
 
-  }
-}
+  }else{
+    alert("cancelado")
+    } 
+}}

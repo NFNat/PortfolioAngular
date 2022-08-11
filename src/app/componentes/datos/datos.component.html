@@ -1,0 +1,96 @@
+
+<div class="container">
+  
+    <div class="card fondo mb-3" style="--bs-bg-opacity: 0.5 ;">
+      <div class="row texto  "display="flex">
+        
+          <div class="card-body"> 
+            <div class="row mb-2"> 
+              <div class="col-8 mb-2">
+                <h5 class="card-title texto1 mx-3">Datos personales</h5>
+              </div>
+              <div class="col-4">
+    
+                <button type="button" class="btn  texto tarjeta" routerLink="/nuevodato"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nuevo</button>
+            </div>
+
+
+
+    <ul>
+        <li *ngFor="let Datos of datos">
+            <div class="container" display="flex">
+
+                    <div class="row">
+
+
+                        <div class="col-3 align-items-center justify-content-center "   display="flex">
+                            <img Class="border-2 rounded-circle foto img-fluid" [src]="Datos.imagen" />
+                        </div>
+
+                        <div class="col-7">
+
+                            <div>
+                                <div class="card-body">
+
+                                    <div class="col-6 texto "> {{Datos.nombre}}
+                                        <br> <br>
+                                        {{Datos.ocupacion}}
+                                        <br>
+                                        {{Datos.nivel}}
+                                        <br>
+                                        {{Datos.lugar}}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2 ">
+                            <div class="row m-2 d-flex " *ngIf="isLogged">
+
+                                <button type="button" class="btn  texto1 tarjeta  " routerLink="/editdato/{{Datos.id}}">
+                                    <i class="fa fa-pen  texto1"></i> Editar</button>
+                            </div>
+
+                            <div class="row m-2 " *ngIf="isLogged">
+                                <button class="btn  texto1 tarjeta" (click)="delete(Datos.id)">
+                                    <i class="fa fa-trash-can texto1"></i> Borrar</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+             
+        </div>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+</div>
+        
+</div>
+ 
+
+
+
+</div>
+</div>
+
+
+            
+           
+
+         
+        
+
+
+

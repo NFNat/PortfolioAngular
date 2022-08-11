@@ -1,24 +1,14 @@
-
 .fondo {
     background-color: rgba(46, 2, 59, 0.95);
-}
-
-.texto {
+  }
+  
+  .texto {
     color: #AF9120;
-    // font-weight: bold;
-    font-size: large;
-
-
-
-}
-
-
-
- 
-  .texto1 {
-    color:#AF9120;
     font-weight: bold;
-    font-size: x-large;
+  }
+  .texto1 {
+    color: #AF9120;
+    //font-weight: bold;
   }
   .tarjeta {
     background-color: rgba(112, 60, 108, 0.4);
@@ -27,8 +17,4 @@
 a {
   color: #8f878a;
   text-decoration: none;
-}
-
-li {
-  list-style:none;
 }

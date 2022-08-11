@@ -10,8 +10,7 @@ import { TokenService } from 'src/app/servicio/token.service';
   styleUrls: ['./idiomas.component.scss']
 })
 export class IdiomasComponent implements OnInit {
-  //@Input() porc:any;
-  //lenguasList:any;
+  
 idiomas: Idiomas[] = [];
   constructor(private idiomasServ: IdiomasService, private tokenService: TokenService) { }
   isLogged = false;
@@ -34,11 +33,8 @@ idiomas: Idiomas[] = [];
   delete(id?:number){
     if(confirm("Desea eliminar?")==true){
 
-
-    if(id!= undefined){
-
-      
-        //alert("Seguro de borrar este Idioma?");
+    if(id!= undefined){      
+       
       this.idiomasServ.delete(id).subscribe(
         data=> {
           this.cargarIdioma();
@@ -49,8 +45,7 @@ idiomas: Idiomas[] = [];
     } 
     }else{
       alert("cancelado")
-      }
-      
+      }      
   }
 
 }

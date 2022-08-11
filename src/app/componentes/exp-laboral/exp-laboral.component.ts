@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ServExperienciaService } from 'src/app/servicio/serv-experiencia.service';
 import { TokenService } from 'src/app/servicio/token.service';
-//import { PortifolioService } from 'src/app/servicio/portifolio.service';
+
 
 @Component({
   selector: 'app-exp-laboral',
@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/servicio/token.service';
   styleUrls: ['./exp-laboral.component.scss']
 })
 export class ExpLaboralComponent implements OnInit {
-  //experienciaList:any;
+  
 expe: Experiencia[] =[];
 
 
@@ -30,12 +30,17 @@ expe: Experiencia[] =[];
   }
 
   cargarExperiencia():void{
-    this.servExperiencia.lista().subscribe(data => {this.expe = data;})
+    this.servExperiencia.lista().subscribe(
+      data => {this.expe = data;})
   }
    
   delete(id?: number){
+    if(confirm("Desea eliminar?")==true){
+
+
+
     if(id!= undefined){
-      alert("Seguro de borrar esta experiencia?");
+      
       this.servExperiencia.delete(id).subscribe(
         data => {
           this.cargarExperiencia();
@@ -45,14 +50,11 @@ expe: Experiencia[] =[];
       )
     }
 
-  }
- // constructor(private datosPortifolio:PortifolioService) { }
+  }else{
+    alert("cancelado")
+    }
 
-  /*ngOnInit(): void {
-    this.datosPortifolio.obtenerDatos().subscribe(data=>{
-      this.experienciaList=data.experience;
-    });
-  }*/
+  }
 
 }
 

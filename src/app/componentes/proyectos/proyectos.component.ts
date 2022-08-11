@@ -34,8 +34,12 @@ export class ProyectosComponent implements OnInit {
     }
 
     delete(id?:number){
+
+      if(confirm("Desea eliminar?")==true){
+
+
       if(id!=undefined){
-       // alert("Seguro de borrar este proyecto?"); // Agregar boton de cancelar
+       
         this.proyectoServ.delete(id).subscribe(
           data => {
             this.cargarProyecto();
@@ -45,5 +49,8 @@ export class ProyectosComponent implements OnInit {
         )
 
     }
-  }
+  }else{
+    alert("cancelado")
+    } 
+}
 }

@@ -1,3 +1,9 @@
+.foto {
+    width: 7.5rem;
+    
+    
+ 
+}
 
 .fondo {
     background-color: rgba(46, 2, 59, 0.95);
@@ -5,22 +11,14 @@
 
 .texto {
     color: #AF9120;
-    // font-weight: bold;
-    font-size: large;
-
-
-
+    font-weight: bold;
 }
 
-
-
- 
-  .texto1 {
-    color:#AF9120;
-    font-weight: bold;
-    font-size: x-large;
-  }
-  .tarjeta {
+.texto1 {
+    color: #AF9120;
+    //font-weight: bold;
+}
+.tarjeta {
     background-color: rgba(112, 60, 108, 0.4);
 }
 
@@ -31,4 +29,5 @@ a {
 
 li {
   list-style:none;
+  
 }

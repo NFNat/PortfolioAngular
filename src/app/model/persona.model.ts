@@ -1,14 +1,14 @@
-export class persona {
+export class Persona {
     id?: number;
-    nombre: String;
-    apellido: String;
-    img: String;
-    posicion: String;
-    scope:String;
-    ciudad:String;
-    about:String;
+    nombre: string;
+    apellido: string;
+    img: string;
+    posicion: string;
+    scope:string;
+    ciudad:string;
+    about:string;
 
-    constructor(nombre:String, apellido:String, img:String, posicion:String, scope:String, ciudad:String, about:String){
+    constructor(nombre: string, apellido:string, img:string, posicion:string, scope:string, ciudad:string, about:string){
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;

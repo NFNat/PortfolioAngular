@@ -1,0 +1,59 @@
+<div class="container-fluid suplogin" *ngIf="datos">
+    <div class="container login ">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card fondo shadow rounded">
+                  <div class="card-body ">
+                    <h5 class="card-title texto m-2"> Editar Datos</h5>
+
+
+
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+                
+                <div class="form-group texto m-3">                   
+
+                    <label for="imagen" class="m-2">Editar Imagen </label>
+                    <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="datos.imagen" required>
+                </div>
+
+
+
+                <div class="form-group texto m-3">                   
+
+                    <label for="nombre" class="m-2">Editar nombre </label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="datos.nombre" required>
+                </div>
+                
+                <!-- posicion -->
+
+                <div class="form-group texto m-3">
+                    <label for="ocupacion" class="m-2">Editar la ocupacion</label>
+                    <input type="text" class="form-control" id="ocupacion" name="ocupacion" [(ngModel)]="datos.ocupacion" required>
+                </div>
+
+                <!-- modo -->
+
+
+                <div class="form-group texto m-3">
+                    <label for="nivel" class="m-2">Editar nivel</label>
+                    <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="datos.nivel" required>
+                </div>
+
+
+                <div class="form-group texto m-3">
+                    <label for="lugar" class="m-2">Editar Lugar</label>
+                    <input type="text" class="form-control" id="lugar" name="lugar" [(ngModel)]="datos.lugar" required>
+                </div>
+
+                <button class="btn btn-secondary tarjeta"> modificar </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
