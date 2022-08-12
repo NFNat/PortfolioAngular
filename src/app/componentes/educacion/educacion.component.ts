@@ -10,47 +10,43 @@ import { TokenService } from 'src/app/servicio/token.service';
 })
 export class EducacionComponent implements OnInit {
 
- educacion: Educacion[] =[];
+  educacion: Educacion[] = [];
 
- constructor(private educacionS: EducacionService, private tokenService: TokenService) { }
- isLogged = false;
+  constructor(
+    private educacionS: EducacionService, 
+    private tokenService: TokenService
+    ) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
     this.cargarEducacion();
 
-    if(this.tokenService.getToken()){
-      this.isLogged= true;
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
     } else {
       this.isLogged = false;
     }
   }
 
-
-  cargarEducacion():void{
+  cargarEducacion(): void {
     this.educacionS.lista().subscribe(
-      data => {this.educacion = data;})
+      data => { this.educacion = data; })
   }
-   
-  delete(id?: number){
-    if(confirm("Desea eliminar?")==true){
 
-
-    if(id!= undefined){
-      
-      this.educacionS.delete(id).subscribe(
-        data => {
-          this.cargarEducacion();
-        }, err => {
-          alert("No se pudo eliminar la educacion")
-        }
-      )
+  delete(id?: number) {
+    if (confirm("Desea eliminar?") == true) {
+      if (id != undefined) {
+        this.educacionS.delete(id).subscribe(
+          data => {
+            this.cargarEducacion();
+          }, err => {
+            alert("No se pudo eliminar la educacion")
+          }
+        )
+      }
+    } else {
+      alert("cancelado")
     }
-
-  }else{
-    alert("cancelado")
-    }      
-}
-
-
-
+  }
 }

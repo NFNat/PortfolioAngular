@@ -11,32 +11,31 @@ import { TokenService } from 'src/app/servicio/token.service';
 export class DatosComponent implements OnInit {
   datos: Datos[] = [];
 
-  constructor(private datosServ: DatosService, private tokenService: TokenService) { }
+  constructor(
+    private datosServ: DatosService, 
+    private tokenService: TokenService
+    ) { }
+
   isLogged = false;
 
   ngOnInit(): void {
-
-
     this.cargarDatos();
-    if(this.tokenService.getToken()){
+
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
-    }
+  }
 
-    cargarDatos(): void{
-      this.datosServ.lista().subscribe(
-        data => {this.datos = data;})
-    }
+  cargarDatos(): void {
+    this.datosServ.lista().subscribe(
+      data => { this.datos = data; })
+  }
 
-    delete(id?:number){
-
-      if(confirm("Desea eliminar?")==true){
-
-
-      if(id!=undefined){
-       
+  delete(id?: number) {
+    if (confirm("Desea eliminar?") == true) {
+      if (id != undefined) {
         this.datosServ.delete(id).subscribe(
           data => {
             this.cargarDatos();
@@ -44,14 +43,10 @@ export class DatosComponent implements OnInit {
             alert("No se pudo borrar")
           }
         )
-
+      }
+    } else {
+      alert("cancelado")
     }
-  }else{
-    alert("cancelado")
-    } 
-
-
-
   }
 
 }

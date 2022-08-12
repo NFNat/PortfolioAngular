@@ -4,87 +4,68 @@
 
             <div class="col-12">
                 <div class="card fondo shadow rounded">
-                  <div class="card-body ">
-                    <h5 class="card-title texto m-2"> Cargar Nueva Educaicon</h5>
+                    <div class="card-body ">
+                        <h5 class="card-title texto m-2"> Cargar Nueva Educaicon</h5>
 
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group texto m-3">
+                                <label for="schoolEd" class="m-2">Nombre de la Institucion</label>
+                                <input type="text" class="form-control" id="schoolEd" name="schoolEd"
+                                    [(ngModel)]="schoolEd" required>
+                            </div>
 
+                            <div class="form-group texto m-3">
+                                <label for="titleEd" class="m-2">Cargar tìtulo</label>
+                                <input type="text" class="form-control" id="titleEd" name="titleEd"
+                                    [(ngModel)]="titleEd" required>
+                            </div>
 
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group texto m-3">
+                            <div class="form-group texto m-3">
+                                <label for="carrerEd" class="m-2">Cargar carrera</label>
+                                <input type="text" class="form-control" id="carrerEd" name="carrerEd"
+                                    [(ngModel)]="careerEd" required>
+                            </div> 
 
-                    <!-- empresa -->
+                            <div class="form-group texto m-3">
+                                <label for="startEd" class="m-2">Cargar año de inicio</label>
+                                <input type="text" class="form-control" id="startEd" name="startEd"
+                                    [(ngModel)]="startEd" required>
+                            </div>
 
-                    <label for="schoolEd" class="m-2">Nombre de la Institucion</label>
-                    <input type="text" class="form-control" id="schoolEd" name="schoolEd" [(ngModel)]="schoolEd" required>
+                            <div class="form-group texto m-3">
+                                <label for="endEd" class="m-2">Cargar año de finalizacion</label>
+                                <input type="text" class="form-control" id="endEd" name="endEd" [(ngModel)]="endEd"
+                                    required>
+                            </div>
+
+                            <div class="form-group texto m-3">
+                                <label for="webEd" class="m-2">Cargar la pagina web de la instiucion</label>
+                                <input type="text" class="form-control" id="webEd" name="webEd" [(ngModel)]="webEd"
+                                    required>
+                            </div>
+
+                            <div class="form-group texto m-3">
+                                <label for="imgEd" class="m-2">Cargar la ruta de la imagen</label>
+                                <input type="text" class="form-control" id="imgEd" name="imgEd" [(ngModel)]="imgEd"
+                                    required>
+                            </div>
+
+                            <!-- Botones Agregar y Volver -->
+
+                            <div class="row ">
+                                <div class="col-6 text-satrt  ">
+                                    <button class="btn texto tarjeta"> Agregar </button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
-                
-                <!-- posicion -->
+            </div>
 
-                <div class="form-group texto m-3">
-                    <label for="titleEd" class="m-2">Cargar tìtulo</label>
-                    <input type="text" class="form-control" id="titleEd" name="titleEd" [(ngModel)]="titleEd" required>
-                </div>
-
-                <!-- modo -->
-
-
-                <div class="form-group texto m-3">
-                    <label for="carrerEd" class="m-2">Cargar carrera</label>
-                    <input type="text" class="form-control" id="carrerEd" name="carrerEd" [(ngModel)]="careerEd" required>
-                </div>
-
-                <!-- actividades  -->
-
-                <!-- 
-                <div class="form-group texto m-3">
-                    <label for="descripcionE" class="m-2">Cargar las actividades realizadas</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
-                </div> -->
-
-                <!-- Año de inicio -->
-
-                <div class="form-group texto m-3">
-                    <label for="startEd" class="m-2">Cargar año de inicio</label>
-                    <input type="text" class="form-control" id="startEd" name="startEd" [(ngModel)]="startEd" required>
-                </div>
-
-
-                <!-- Año de finalización -->
-
-                <div class="form-group texto m-3">
-                    <label for="endEd" class="m-2">Cargar año de finalizacion</label>
-                    <input type="text" class="form-control" id="endEd" name="endEd" [(ngModel)]="endEd" required>
-                </div>
-
-
-
-                <!-- Web de la empresa -->
-                <div class="form-group texto m-3">
-                    <label for="webEd" class="m-2">Cargar la pagina web de la instiucion</label>
-                    <input type="text" class="form-control" id="webEd" name="webEd" [(ngModel)]="webEd" required>
-                </div>
-
-
-                <div class="form-group texto m-3">
-                    <label for="imgEd" class="m-2">Cargar la ruta de la imagen</label>
-                    <input type="text" class="form-control" id="imgEd" name="imgEd" [(ngModel)]="imgEd" required>
-                </div>
-
-                
-
-                
-
-               
-
-
-
-                <button class="btn btn-secondary tarjeta"> Agregar </button>
-            </form>
         </div>
     </div>
 </div>
-
-</div>
-</div>
-</div>
-

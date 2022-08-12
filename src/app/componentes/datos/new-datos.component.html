@@ -4,56 +4,57 @@
 
             <div class="col-12">
                 <div class="card fondo shadow rounded">
-                  <div class="card-body ">
-                    <h5 class="card-title texto m-2"> Cargar Nuevos Datos</h5>
+                    <div class="card-body ">
+                        <h5 class="card-title texto m-2"> Cargar Nuevos Datos</h5>
 
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
 
+                            <div class="form-group texto m-3">
+                                <label for="imagen" class="m-2">Cargar URL de la imagen</label>
+                                <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="imagen"
+                                    required>
+                            </div>
 
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group texto m-3">
+                                <label for="nombre" class="m-2">Cargar Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre"
+                                    required>
+                            </div>
 
-                <div class="form-group texto m-3">
+                            <div class="form-group texto m-3">
+                                <label for="ocupacion" class="m-2">Cargar la ocupacion</label>
+                                <input type="text" class="form-control" id="ocupacion" name="ocupacion"
+                                    [(ngModel)]="ocupacion" required>
+                            </div>
 
-                    <label for="imagen" class="m-2">Cargar URL de la imagen</label>
-                    <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="imagen" required>
+                            <div class="form-group texto m-3">
+                                <label for="nivel" class="m-2">Cargar el nivel</label>
+                                <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="nivel"
+                                    required>
+                            </div>
+
+                            <div class="form-group texto m-3">
+                                <label for="lugar" class="m-2">Cargar el lugar</label>
+                                <input type="text" class="form-control" id="lugar" name="lugar" [(ngModel)]="lugar"
+                                    required>
+                            </div>
+
+                                <!-- Botones Agregar y volver -->
+                                
+                            <div class="row ">
+                                <div class="col-6 text-satrt  ">
+                                    <button class="btn texto tarjeta"> Agregar </button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn  texto tarjeta" (click)="volver()"> Volver </button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
                 </div>
+            </div>
 
-
-                <div class="form-group texto m-3">
-
-                    <label for="nombre" class="m-2">Cargar Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
-                </div>
-                
-                <!-- posicion -->
-
-                <div class="form-group texto m-3">
-                    <label for="ocupacion" class="m-2">Cargar la ocupacion</label>
-                    <input type="text" class="form-control" id="ocupacion" name="ocupacion" [(ngModel)]="ocupacion" required>
-                </div>
-
-                <!-- modo -->
-
-                <div class="form-group texto m-3">
-                    <label for="nivel" class="m-2">Cargar el nivel</label>
-                    <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="nivel" required>
-                </div>
-
-
-                <div class="form-group texto m-3">
-                    <label for="lugar" class="m-2">Cargar el lugar</label>
-                    <input type="text" class="form-control" id="lugar" name="lugar" [(ngModel)]="lugar" required>
-                </div>
-
-
-                <button class="btn btn-secondary tarjeta"> Agregar </button>
-            </form>
         </div>
     </div>
 </div>
-
-</div>
-</div>
-</div>
-
-
-

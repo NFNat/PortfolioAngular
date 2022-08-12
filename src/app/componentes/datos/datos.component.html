@@ -1,96 +1,84 @@
-
 <div class="container">
-  
-    <div class="card fondo mb-3" style="--bs-bg-opacity: 0.5 ;">
-      <div class="row texto  "display="flex">
-        
-          <div class="card-body"> 
-            <div class="row mb-2"> 
-              <div class="col-8 mb-2">
-                <h5 class="card-title texto1 mx-3">Datos personales</h5>
-              </div>
-              <div class="col-4">
+
+    <div class="card fondo mb-1 " >    
+        <div class="card-body">
+            <div class="row texto " >    
+                <div class="col-8 ">
+                    <h5 class="card-title text-center texto1 ">Datos personales</h5>
+                </div>
     
-                <button type="button" class="btn  texto tarjeta" routerLink="/nuevodato"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nuevo</button>
+                <!-- Boton de agregar nuevo -->
+    
+                <div class="col-4">
+                    <button type="button" class="btn  texto tarjeta" routerLink="/nuevodato" *ngIf="isLogged"> <i
+                            class="fa-solid fa-folder-plus"></i> Nuevo</button>
+                </div>
             </div>
+        </div>
+    </div>
 
+    <!-- -------------------- -->
+    <!--   Iteracion inicio   -->
+    <!-- -------------------- -->
 
-
+    
     <ul>
         <li *ngFor="let Datos of datos">
-            <div class="container" display="flex">
-
-                    <div class="row">
-
-
-                        <div class="col-3 align-items-center justify-content-center "   display="flex">
-                            <img Class="border-2 rounded-circle foto img-fluid" [src]="Datos.imagen" />
-                        </div>
-
-                        <div class="col-7">
-
-                            <div>
-                                <div class="card-body">
-
-                                    <div class="col-6 texto "> {{Datos.nombre}}
-                                        <br> <br>
-                                        {{Datos.ocupacion}}
-                                        <br>
-                                        {{Datos.nivel}}
-                                        <br>
-                                        {{Datos.lugar}}
-                                    </div>
-
-                                </div>
+    
+            <div class="row ">    
+    
+                <div class="col-3 ">
+                    <div class="card fondo">
+                        <!-- <div class="card-body"> -->
+                        <div class="row  ">
+                            <div class="d-flex justify-content-center align-items-center ">
+                                <img Class=" rounded-circle foto img-fluid p-2" [src]="Datos.imagen" />
                             </div>
                         </div>
-
-                        <div class="col-2 ">
-                            <div class="row m-2 d-flex " *ngIf="isLogged">
-
-                                <button type="button" class="btn  texto1 tarjeta  " routerLink="/editdato/{{Datos.id}}">
-                                    <i class="fa fa-pen  texto1"></i> Editar</button>
-                            </div>
-
-                            <div class="row m-2 " *ngIf="isLogged">
-                                <button class="btn  texto1 tarjeta" (click)="delete(Datos.id)">
-                                    <i class="fa fa-trash-can texto1"></i> Borrar</button>
-
-                            </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
+                </div>
+    
+                <div class="col-9 ">
+                    <div class="card fondo ">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-9 texto "> {{Datos.nombre}}
+                                    <br> <br>
+                                    {{Datos.ocupacion}}
+                                    <br>
+                                    {{Datos.nivel}}
+                                    <br>
+                                    {{Datos.lugar}}
+                                </div>
 
+                                <!-- Botones editar y borrar -->   
+    
+                                <div class="col-3">
+                                    <div class="row m-3 d-flex " *ngIf="isLogged">
+                                        <button type="button" class="btn  texto1 tarjeta  "
+                                            routerLink="/editdato/{{Datos.id}}">
+                                            <i class="fa fa-pen  texto1"></i> Editar</button>
+                                    </div>    
+                                    <div class="row m-3 " *ngIf="isLogged">
+                                        <button class="btn  texto1 tarjeta" (click)="delete(Datos.id)">
+                                            <i class="fa fa-trash-can texto1"></i> Borrar</button>
+                                    </div>
+                                </div>
 
-
-
-
-             
-        </div>
-
-
-
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+    
+            </div>    
+    
         </li>
     </ul>
 
 
-
-
-</div>
-        
-</div>
- 
-
-
+    <!-- -------------------- -->
+    <!--    Iteracion fin     -->
+    <!-- -------------------- -->
 
 </div>
-</div>
-
-
-            
-           
-
-         
-        
-
-
-

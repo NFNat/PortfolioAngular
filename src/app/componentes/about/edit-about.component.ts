@@ -18,51 +18,48 @@ export class EditAboutComponent implements OnInit {
     private activatedRouter: ActivatedRoute,
     private router: Router, 
     private tokenService: TokenService
-
   ) { }
+
   isLogged = false;
 
   ngOnInit(): void {
-
     const id = this.activatedRouter.snapshot.params['id'];
+
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
+    
     if (this.isLogged) {
+      this.servAbout.detail(id).subscribe(
+        data => {
+          this.about = data;
+        }, err => {
+          alert("error al modificarl");
+          this.router.navigate(['']);
+        }
+      )
+    } else {
+      alert("No autorizado")
+      this.router.navigate(['portfolio']);
+    }
 
+  }
 
-
-
-    this.servAbout.detail(id).subscribe(
+  onUpdate(): void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.servAbout.update(id, this.about).subscribe(
       data => {
-        this.about=data;
-      }, err =>{
-        alert("error al modificarl");
+        this.router.navigate(['']);
+      }, err => {
+        alert("error al modificar");
         this.router.navigate(['']);
       }
     )
-  } else {
-    alert("No autorizado")
-    this.router.navigate(['portfolio']);
-
   }
 
-}
-
-
-  
-onUpdate(): void{
-  const id = this.activatedRouter.snapshot.params['id'];
-  this.servAbout.update(id, this.about).subscribe(
-  data => {
-    this.router.navigate(['']);
-  }, err =>{
-    alert("error al modificar");
-    this.router.navigate(['']);
+  volver(): void {
+    this.router.navigate(['portfolio'])
   }
-  )
-
-}
 }

@@ -62,6 +62,11 @@ export class EditExperienciaComponent implements OnInit {
 
   }
 
+  volver():void{
+    this.router.navigate(['portfolio'])
+
+  }
+
 }
 
 

@@ -1,38 +1,33 @@
 <div class="container-fluid suplogin" *ngIf="about">
     <div class="container login ">
         <div class="row">
-
             <div class="col-12">
                 <div class="card fondo shadow rounded">
                     <div class="card-body ">
-                        <h5 class="card-title texto m-2"> Editar About</h5>
-            
-            
-            
+                        <h5 class="card-title texto1 m-2"> Editar About</h5>
+
                         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                             <div class="form-group texto m-3">
-            
-                                      
-                                <label for="about" class="m-2">Editar About</label>
-            
+                                <label for="about " class="m-2 texto1">Editar</label>
                                 <textarea name="about" id="about" cols="50" rows="5" type="text" class="form-control"
                                     [(ngModel)]="about.about" required></textarea>
-                                   
-            
-            
                             </div>
-            
-                            <button class="btn  texto1 tarjeta"> modificar </button>
-                               
-                          
-            
-            
-            
+
+                            <!-- Botones de Modificar y volver -->
+                            
+                            <div class="row ">
+                                <div class="col-6 text-satrt  ">
+                                    <button class="btn  texto1 tarjeta"> Modificar </button>
+                                </div>
+                                <div class="col-6 text-end  ">
+                                    <button class="btn texto1 tarjeta" (click)="volver()"> Volver </button>
+                                </div>
+                            </div>
                         </form>
+
                     </div>
                 </div>
             </div>
-
-</div>
-</div>
+        </div>
+    </div>
 </div>

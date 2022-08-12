@@ -62,4 +62,10 @@ onUpdate(): void{
     }
   )
 }
+volver():void{
+  this.router.navigate(['portfolio'])
+
+}
+
+
 }

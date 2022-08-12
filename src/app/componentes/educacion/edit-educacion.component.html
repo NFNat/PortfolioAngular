@@ -4,78 +4,68 @@
 
             <div class="col-12">
                 <div class="card fondo shadow rounded">
-                  <div class="card-body ">
-                    <h5 class="card-title texto m-2"> Editar Educacion</h5>
+                    <div class="card-body ">
+                        <h5 class="card-title texto m-2"> Editar Educacion</h5>
 
+                        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                            <div class="form-group texto m-3">
 
+                                <label for="schoolEd" class="m-2">Editar Nombre de la Institucion</label>
+                                <input type="text" class="form-control" id="schoolEd" name="schoolEd"
+                                    [(ngModel)]="educacion.schoolEd" required>
+                            </div>
 
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group texto m-3">
+                            <div class="form-group texto m-3">
+                                <label for="titleEd" class="m-2">Editar tìtulo</label>
+                                <input type="text" class="form-control" id="titleEd" name="titleEd"
+                                    [(ngModel)]="educacion.titleEd" required>
+                            </div>
 
-                    <!-- empresa -->
+                            <div class="form-group texto m-3">
+                                <label for="careerEd" class="m-2">Editar carrera</label>
+                                <input type="text" class="form-control" id="carrerEd" name="carrerEd"
+                                    [(ngModel)]="educacion.careerEd" required>
+                            </div>
 
-                    <label for="schoolEd" class="m-2">Editar Nombre de la Institucion</label>
-                    <input type="text" class="form-control" id="schoolEd" name="schoolEd" [(ngModel)]="educacion.schoolEd" required>
+                            <div class="form-group texto m-3">
+                                <label for="startEd" class="m-2">Editar año de inicio</label>
+                                <input type="text" class="form-control" id="startEd" name="startEd"
+                                    [(ngModel)]="educacion.startEd" required>
+                            </div>
+
+                            <div class="form-group texto m-3">
+                                <label for="endEd" class="m-2">Editar año de finalizacion</label>
+                                <input type="text" class="form-control" id="endEd" name="endEd"
+                                    [(ngModel)]="educacion.endEd" required>
+                            </div>
+
+                            <div class="form-group texto m-3">
+                                <label for="webEd" class="m-2">Editar la pagina web de la instiucion</label>
+                                <input type="text" class="form-control" id="webEd" name="webEd"
+                                    [(ngModel)]="educacion.webEd" required>
+                            </div>
+
+                            <div class="form-group texto m-3">
+                                <label for="imgEd" class="m-2">Editar la ruta de la imagen</label>
+                                <input type="text" class="form-control" id="imgEd" name="imgEd"
+                                    [(ngModel)]="educacion.imgEd" required>
+                            </div>
+
+                            <!-- Botonoes de Modificar y volver -->
+
+                            <div class="row ">
+                                <div class="col-6 text-satrt  ">
+                                    <button class="btn texto tarjeta"> Modificar </button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                
-                <!-- posicion -->
+            </div>
 
-                <div class="form-group texto m-3">
-                    <label for="titleEd" class="m-2">Editar tìtulo</label>
-                    <input type="text" class="form-control" id="titleEd" name="titleEd" [(ngModel)]="educacion.titleEd" required>
-                </div>
-
-                <!-- modo -->
-
-
-                <div class="form-group texto m-3">
-                    <label for="careerEd" class="m-2">Editar carrera</label>
-                    <input type="text" class="form-control" id="carrerEd" name="carrerEd" [(ngModel)]="educacion.careerEd" required>
-                </div>
-
-                <!-- actividades  -->
-
-                <!-- 
-                <div class="form-group texto m-3">
-                    <label for="descripcionE" class="m-2">Cargar las actividades realizadas</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
-                </div> -->
-
-                <!-- Año de inicio -->
-
-                <div class="form-group texto m-3">
-                    <label for="startEd" class="m-2">Editar año de inicio</label>
-                    <input type="text" class="form-control" id="startEd" name="startEd" [(ngModel)]="educacion.startEd" required>
-                </div>
-
-
-                <!-- Año de finalización -->
-
-                <div class="form-group texto m-3">
-                    <label for="endEd" class="m-2">Editar año de finalizacion</label>
-                    <input type="text" class="form-control" id="endEd" name="endEd" [(ngModel)]="educacion.endEd" required>
-                </div>
-
-
-
-                <!-- Web de la empresa -->
-                <div class="form-group texto m-3">
-                    <label for="webEd" class="m-2">Editar la pagina web de la instiucion</label>
-                    <input type="text" class="form-control" id="webEd" name="webEd" [(ngModel)]="educacion.webEd" required>
-                </div>
-
-                <div class="form-group texto m-3">
-                    <label for="imgEd" class="m-2">Editar la ruta de la imagen</label>
-                    <input type="text" class="form-control" id="imgEd" name="imgEd" [(ngModel)]="educacion.imgEd" required>
-                </div>
-
-
-                <button class="btn btn-secondary tarjeta"> modificar </button>
-            </form>
         </div>
     </div>
-</div>
-
-</div>
-</div>
 </div>

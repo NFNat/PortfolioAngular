@@ -62,6 +62,11 @@ export class EditIdiomasComponent implements OnInit {
     )
   }
 
+  volver():void{
+    this.router.navigate(['portfolio'])
+
+  }
+
 }
 
 

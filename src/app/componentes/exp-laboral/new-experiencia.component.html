@@ -44,13 +44,6 @@
 
 
 
-<!-- 
-                <div class="form-group texto m-3">
-                    <label for="descripcionE" class="m-2">Cargar las actividades realizadas</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
-                </div> -->
-
-                <!-- Año de inicio -->
 
                 <div class="form-group texto m-3">
                     <label for="startE" class="m-2">Cargar año de inicio</label>
@@ -58,7 +51,7 @@
                 </div>
 
 
-                <!-- Año de finalización -->
+                
 
                 <div class="form-group texto m-3">
                     <label for="endE" class="m-2">Cargar año de finalizacion</label>
@@ -80,10 +73,21 @@
 
 
                
+                <div class="row ">
+
+                    <div class="col-6 text-satrt  ">
 
 
+                <button class="btn texto tarjeta"> Agregar </button>
 
-                <button class="btn btn-secondary tarjeta"> Agregar </button>
+            </div>
+
+            <div class="col-6 text-end">
+
+                <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
+            </div>
+        </div>
+
             </form>
         </div>
     </div>

@@ -13,15 +13,13 @@ export class EditEducacionComponent implements OnInit {
   educacion: Educacion = null;
 
   constructor(
-    private educacionS: EducacionService, 
+    private educacionS: EducacionService,
     private activatedRouter: ActivatedRoute,
     private router: Router,
     private tokenService: TokenService
+  ) { }
 
-
-    ) { }
-
-    isLogged = false;
+  isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -32,41 +30,34 @@ export class EditEducacionComponent implements OnInit {
       this.isLogged = false;
     }
     if (this.isLogged) {
-
-
-
-
-    this.educacionS.detail(id).subscribe(
-      data => {
-        this.educacion=data;
-      }, err =>{
-      alert("error al modificar la educacion");
-        this.router.navigate(['']);
-      }
-    )
-  }else {
-    alert("No autorizado")
-    this.router.navigate(['portfolio']);
-
+      this.educacionS.detail(id).subscribe(
+        data => {
+          this.educacion = data;
+        }, err => {
+          alert("error al modificar la educacion");
+          this.router.navigate(['']);
+        }
+      )
+    } else {
+      alert("No autorizado")
+      this.router.navigate(['portfolio']);
+    }
   }
 
-}
-
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.update(id, this.educacion).subscribe(
-      data=>{
+      data => {
         this.router.navigate(['']);
-      }, err =>{
+      }, err => {
         alert("error al modificar la educacion");
         this.router.navigate(['']);
       }
     )
-
   }
-
-
-
+  volver(): void {
+    this.router.navigate(['portfolio'])
+  }
 }
 
 

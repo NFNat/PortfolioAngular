@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ServExperienciaService } from 'src/app/servicio/serv-experiencia.service';
+import { TokenService } from 'src/app/servicio/token.service';
 
 @Component({
   selector: 'app-new-experiencia',
@@ -22,9 +23,36 @@ export class NewExperienciaComponent implements OnInit {
 
 
 
-  constructor(private servExperiencia: ServExperienciaService, private router: Router) { }
+  constructor(
+    private servExperiencia: ServExperienciaService, 
+    private router: Router,
+    private activatedRouter: ActivatedRoute,
+    private tokenService: TokenService  
+    
+    
+    ) { }
+    isLogged = false;
 
   ngOnInit(): void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+    if (this.isLogged) {
+
+  } else {
+    alert("No autorizado")
+    this.router.navigate(['portfolio']);
+  }
+
+
+
+
+
+
+
   }
   onCreate():void{
     const expe = new Experiencia(this.nombreE, this.descripcionE, this.positionE, this.modoE, this.startE, this.endE, this.webE,this.imgE);
@@ -37,5 +65,13 @@ export class NewExperienciaComponent implements OnInit {
     }
     )
   }
+
+
+  volver():void{
+    this.router.navigate(['portfolio'])
+
+  }
+
+  
 
 }

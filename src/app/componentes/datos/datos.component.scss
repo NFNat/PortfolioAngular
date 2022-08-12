@@ -1,8 +1,5 @@
 .foto {
-    width: 7.5rem;
-    
-    
- 
+    width: 9.5rem;
 }
 
 .fondo {
@@ -13,21 +10,28 @@
     color: #AF9120;
     font-weight: bold;
 }
-
 .texto1 {
     color: #AF9120;
-    //font-weight: bold;
+    
 }
+
 .tarjeta {
     background-color: rgba(112, 60, 108, 0.4);
 }
 
 a {
-  color: #8f878a;
-  text-decoration: none;
+    color: #8f878a;
+    text-decoration: none;
 }
 
 li {
-  list-style:none;
-  
+    list-style:none;
+    list-style-type:none;
+    padding: 0px;
 }
+ul {
+    list-style:none;
+    list-style-type:none;
+    padding: 0px;
+}
+

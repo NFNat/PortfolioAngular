@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Skills } from 'src/app/model/skills';
 import { SkillsService } from 'src/app/servicio/skills.service';
+import { TokenService } from 'src/app/servicio/token.service';
 
 @Component({
   selector: 'app-new-skills',
@@ -14,9 +15,30 @@ export class NewSkillsComponent implements OnInit {
     progress: number = 0;
     imgSkill: string = "";
 
-  constructor(private skillsS: SkillsService, private router: Router) { }
+  constructor(
+    private skillsS: SkillsService, 
+    private router: Router,
+    private activatedRouter: ActivatedRoute,
+    private tokenService: TokenService     
+    
+    
+    ) { }
+    isLogged = false;
+
 
   ngOnInit(): void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+    if (this.isLogged) {
+
+  } else {
+    alert("No autorizado")
+    this.router.navigate(['portfolio']);
+  }
   }
 
 
@@ -31,5 +53,11 @@ onCreate():void{
   this.router.navigate(['']);
   }  
   )
+}
+
+
+volver():void{
+  this.router.navigate(['portfolio'])
+
 }
 }

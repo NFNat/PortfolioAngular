@@ -33,7 +33,6 @@ export class EditDatosComponent implements OnInit {
       this.isLogged = false;
     }
     if (this.isLogged) {
-
       this.datosServ.detail(id).subscribe(
         data => {
           this.datos = data;
@@ -45,20 +44,23 @@ export class EditDatosComponent implements OnInit {
     } else {
       alert("No autorizado")
       this.router.navigate(['portfolio']);
-
     }
   }
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.datosServ.update(id, this.datos).subscribe(
-    data => {
-      this.router.navigate(['']);
-    },err =>{
-      alert("error al modificar");
-      this.router.navigate(['']);
-    }
+      data => {
+        this.router.navigate(['']);
+      }, err => {
+        alert("error al modificar");
+        this.router.navigate(['']);
+      }
     )
+  }
+
+  volver(): void {
+    this.router.navigate(['portfolio'])
   }
 
 }
