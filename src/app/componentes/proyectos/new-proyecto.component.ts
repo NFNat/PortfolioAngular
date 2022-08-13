@@ -11,20 +11,20 @@ import { TokenService } from 'src/app/servicio/token.service';
 })
 export class NewProyectoComponent implements OnInit {
 
-  id: number 
+  id: number
   nombreProy: string = "";
-  descProy: string ="" ;
-  webProy: string = "" ;
+  descProy: string = "";
+  webProy: string = "";
 
   constructor(
-    private proyectoServ: ProyectosService, 
+    private proyectoServ: ProyectosService,
     private router: Router,
     private activatedRouter: ActivatedRoute,
-    private tokenService: TokenService  
-    
-    
-    ) { }
-    isLogged = false;
+    private tokenService: TokenService
+
+
+  ) { }
+  isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -35,30 +35,25 @@ export class NewProyectoComponent implements OnInit {
     }
     if (this.isLogged) {
 
-  } else {
-    alert("No autorizado")
-    this.router.navigate(['portfolio']);
+    } else {
+      alert("No autorizado")
+      this.router.navigate(['portfolio']);
+    }
   }
 
-
-
-
-  }
-
-  onCreate():void{
+  onCreate(): void {
     const proyectos = new Proyectos(this.nombreProy, this.descProy, this.webProy);
-    this.proyectoServ.save(proyectos).subscribe(data =>{
+    this.proyectoServ.save(proyectos).subscribe(data => {
       alert("Proyecto agregado");
       this.router.navigate(['']);
-    },err =>{
-    alert("falló");
-    this.router.navigate(['']);
-    }  
+    }, err => {
+      alert("falló");
+      this.router.navigate(['']);
+    }
     )
-}
+  }
 
-volver():void{
-  this.router.navigate(['portfolio'])
-
-}
+  volver(): void {
+    this.router.navigate(['portfolio'])
+  }
 }

@@ -4,51 +4,41 @@
 
             <div class="col-12">
                 <div class="card fondo shadow rounded">
-                  <div class="card-body ">
-                    <h5 class="card-title texto m-2"> Cargar Nueva Proyecto</h5>
+                    <div class="card-body ">
+                        <h5 class="card-title texto m-2"> Cargar Nueva Proyecto</h5>
 
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
 
+                            <div class="form-group texto m-3">
+                                <label for="nombreProy" class="m-2">Cargar nombre del Proyecto</label>
+                                <input type="text" class="form-control" id="nombreProy" name="nombreProy"
+                                    [(ngModel)]="nombreProy" required>
+                            </div>
+                            <div class="form-group texto m-3">
+                                <label for="descProy" class="m-2">Cargar la Descripcion</label>
+                                <input type="text" class="form-control" id="descProy" name="descProy"
+                                    [(ngModel)]="descProy" required>
+                            </div>
+                            <div class="form-group texto m-3">
+                                <label for="webProy" class="m-2">Cargar la ruta de la imagen</label>
+                                <input type="text" class="form-control" id="webProy" name="webProy"
+                                    [(ngModel)]="webProy" required>
+                            </div>
 
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group texto m-3">
+                            <!-- Botones Agregar y Volver -->
 
-                    <!-- empresa -->
-
-                    <label for="nombreProy" class="m-2">Cargar nombre del Proyecto</label>
-                    <input type="text" class="form-control" id="nombreProy" name="nombreProy" [(ngModel)]="nombreProy" required>
+                            <div class="row ">
+                                <div class="col-6 text-satrt  ">
+                                    <button class="btn texto tarjeta"> Agregar </button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                
-                <!-- posicion -->
-
-                <div class="form-group texto m-3">
-                    <label for="descProy" class="m-2">Cargar la Descripcion</label>
-                    <input type="text" class="form-control" id="descProy" name="descProy" [(ngModel)]="descProy" required>
-                </div>
-
-                <!-- modo -->
-
-                <div class="form-group texto m-3">
-                    <label for="webProy" class="m-2">Cargar la ruta de la imagen</label>
-                    <input type="text" class="form-control" id="webProy" name="webProy" [(ngModel)]="webProy" required>
-                </div>
-
-                <div class="row ">
-
-                    <div class="col-6 text-satrt  ">
-                <button class="btn texto tarjeta"> Agregar </button>
             </div>
-            <div class="col-6 text-end">
-                <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
-        </div>
-    </div>
-
-            </form>
         </div>
     </div>
 </div>
-
-</div>
-</div>
-</div>
-
-

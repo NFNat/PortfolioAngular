@@ -10,17 +10,17 @@ import { TokenService } from 'src/app/servicio/token.service';
   styleUrls: ['./edit-experiencia.component.scss']
 })
 export class EditExperienciaComponent implements OnInit {
-  expLab : Experiencia = null;
+  expLab: Experiencia = null;
 
 
   constructor(
-    private servExperiencia: ServExperienciaService, 
-    private activatedRouter: ActivatedRoute, 
+    private servExperiencia: ServExperienciaService,
+    private activatedRouter: ActivatedRoute,
     private router: Router,
     private tokenService: TokenService
-    ) { }
-    
-    isLogged = false;
+  ) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -31,42 +31,35 @@ export class EditExperienciaComponent implements OnInit {
       this.isLogged = false;
     }
     if (this.isLogged) {
-
-
-    this.servExperiencia.detail(id).subscribe(
-      data => {
-        this.expLab=data;
-      }, err =>{
-      alert("error al modificar la experiencia");
-        this.router.navigate(['']);
-      }
-    )
-  } else {
-    alert("No autorizado")
-    this.router.navigate(['portfolio']);
-
+      this.servExperiencia.detail(id).subscribe(
+        data => {
+          this.expLab = data;
+        }, err => {
+          alert("error al modificar la experiencia");
+          this.router.navigate(['']);
+        }
+      )
+    } else {
+      alert("No autorizado")
+      this.router.navigate(['portfolio']);
+    }
   }
 
-}
-
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.servExperiencia.update(id, this.expLab).subscribe(
-      data=>{
+      data => {
         this.router.navigate(['']);
-      }, err =>{
+      }, err => {
         alert("error al modificar la experien");
         this.router.navigate(['']);
       }
     )
-
   }
 
-  volver():void{
+  volver(): void {
     this.router.navigate(['portfolio'])
-
   }
-
 }
 
 

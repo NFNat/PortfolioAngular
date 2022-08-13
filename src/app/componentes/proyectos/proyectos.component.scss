@@ -3,42 +3,32 @@ a {
     text-decoration: none;
 }
 
-.masproy{
-    color: #8f878a;
-    
-}
 .tarjeta {
     background-color: rgba(112, 60, 108, 0.5);
 }
 
-
-.tarjeta1{
+.tarjeta1 {
     background-color: rgba(112, 60, 108, 0.5);
     border-radius: 45px;
-
 }
-.project {
 
+.project {
     transition: transform 0.2s ease;
 }
 
 .fondo {
     background-color: rgba(46, 2, 59, 0.95);
-  }
-  
-  .texto {
+}
+
+.texto {
     color: #AF9120;
-        font-weight: bold;
-      };
-    
+    font-weight: bold;
+}
+.texto1 {
+    color: #AF9120;
+}
 
-      .texto1 {
-        color: #AF9120;
-            //font-weight: bold;
-          };
-        
-
-  li {
-    list-style:none;
+li {
+    list-style: none;
     display: inline;
 }

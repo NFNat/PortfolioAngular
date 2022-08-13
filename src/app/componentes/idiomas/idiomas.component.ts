@@ -10,42 +10,42 @@ import { TokenService } from 'src/app/servicio/token.service';
   styleUrls: ['./idiomas.component.scss']
 })
 export class IdiomasComponent implements OnInit {
-  
-idiomas: Idiomas[] = [];
-  constructor(private idiomasServ: IdiomasService, private tokenService: TokenService) { }
+
+  idiomas: Idiomas[] = [];
+  constructor(
+    private idiomasServ: IdiomasService, 
+    private tokenService: TokenService
+    ) { }
+
   isLogged = false;
 
   ngOnInit(): void {
     this.cargarIdioma();
-    if(this.tokenService.getToken()){
-      this.isLogged= true;
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
     } else {
       this.isLogged = false;
     }
-  
   }
 
-  cargarIdioma():void{
+  cargarIdioma(): void {
     this.idiomasServ.lista().subscribe(
-      data=> {this.idiomas = data;})
+      data => { this.idiomas = data; })
   }
 
-  delete(id?:number){
-    if(confirm("Desea eliminar?")==true){
-
-    if(id!= undefined){      
-       
-      this.idiomasServ.delete(id).subscribe(
-        data=> {
-          this.cargarIdioma();
-        }, err => {
-          alert("no se pudo eliminar el idioma")
-        }
-      )
-    } 
-    }else{
+  delete(id?: number) {
+    if (confirm("Desea eliminar?") == true) {
+      if (id != undefined) {
+        this.idiomasServ.delete(id).subscribe(
+          data => {
+            this.cargarIdioma();
+          }, err => {
+            alert("no se pudo eliminar el idioma")
+          }
+        )
+      }
+    } else {
       alert("cancelado")
-      }      
+    }
   }
-
 }

@@ -10,51 +10,45 @@ import { TokenService } from 'src/app/servicio/token.service';
   styleUrls: ['./exp-laboral.component.scss']
 })
 export class ExpLaboralComponent implements OnInit {
-  
-expe: Experiencia[] =[];
 
+  expe: Experiencia[] = [];
 
-  constructor(private servExperiencia: ServExperienciaService, private tokenService: TokenService) { }
+  constructor(
+    private servExperiencia: ServExperienciaService, 
+    private tokenService: TokenService
+    ) { }
 
   isLogged = false;
 
   ngOnInit(): void {
 
     this.cargarExperiencia();
-    if(this.tokenService.getToken()){
-      this.isLogged= true;
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
     } else {
       this.isLogged = false;
     }
-
   }
 
-  cargarExperiencia():void{
+  cargarExperiencia(): void {
     this.servExperiencia.lista().subscribe(
-      data => {this.expe = data;})
-  }
-   
-  delete(id?: number){
-    if(confirm("Desea eliminar?")==true){
-
-
-
-    if(id!= undefined){
-      
-      this.servExperiencia.delete(id).subscribe(
-        data => {
-          this.cargarExperiencia();
-        }, err => {
-          alert("No se pudo eliminar la experiencia")
-        }
-      )
-    }
-
-  }else{
-    alert("cancelado")
-    }
-
+      data => { this.expe = data; })
   }
 
+  delete(id?: number) {
+    if (confirm("Desea eliminar?") == true) {
+      if (id != undefined) {
+        this.servExperiencia.delete(id).subscribe(
+          data => {
+            this.cargarExperiencia();
+          }, err => {
+            alert("No se pudo eliminar la experiencia")
+          }
+        )
+      }
+    } else {
+      alert("cancelado")
+    }
+  }
 }
 

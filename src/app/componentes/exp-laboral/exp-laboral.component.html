@@ -11,18 +11,20 @@
         </div>
         </div>
        <div class="mx-5">
+
+
+            <!-- -------------------- -->
+            <!--   Iteracion inicio   -->
+            <!-- -------------------- -->
+
         <ul>
-            <li *ngFor="let Experiencia of expe">
-        
+            <li *ngFor="let Experiencia of expe">        
                 <div class="row texto mt-3 d-flex align-items-center" display="flex">
-                    <div class="col-2 align-self-center justify-content-center">
-                        
-                        <img 
-                        class="fotoeducacion "
-                        [src]="Experiencia.imgE"/>
+                    <div class="col-2 align-self-center justify-content-center">                        
+                        <img class="fotoeducacion" [src]="Experiencia.imgE"/>
                     </div>
         
-                    <div class="col-5 ">
+                    <div class="col-6 ">
                         <h5>{{Experiencia.nombreE}}</h5>
                         <h6>{{Experiencia.positionE}} - {{Experiencia.modoE}}</h6>
                         <p class="texto1"> {{Experiencia.descripcionE}}</p>
@@ -30,90 +32,33 @@
                     </div>
                     <div class="col-3 align-self-center ">
                         <button class="btn  tarjeta "><a href="http://{{Experiencia.webE}}" target="_blank" class="texto1">Web Page</a></button>
-                        
-
                     </div>
 
-                    <div class="col-2  ">
+                    <!-- Botones de Editar y borrar -->
+                    
+                    <div class="col-1  ">
                         <div class="row m-2 d-flex " *ngIf="isLogged">
-
-                            <button class="btn  texto1 tarjeta  " routerLink="/editexp/{{Experiencia.id}}">
-                                <i class="fa fa-pen  texto1"></i>  Editar</button>
-                            </div>
-                            
+                            <a routerLink="/editexp/{{Experiencia.id}}">
+                                <i class="fa fa-pen  texto1"></i> </a>
+                            </div>                            
                         <div class="row m-2 "  *ngIf="isLogged" >
-                            <button class="btn  texto1 tarjeta" (click)="delete(Experiencia.id)">
-                                <i class="fa fa-trash-can texto1"></i>  Borrar</button>
-                            
+                            <a (click)="delete(Experiencia.id)">
+                                <i class="fa fa-trash-can texto1"></i> </a>                            
                             </div>
                     </div>
                 </div>
             </li>
         </ul>
 
-       <!-- <table class="table texto"> 
-        <tr *ngFor="let Experiencia of expe">
-            <td><h5>{{Experiencia.nombreE}}</h5></td>
-            <td>{{Experiencia.descripcionE}}</td>
-            <td *ngIf="isLogged">
+            <!-- -------------------- -->
+            <!--   Iteracion fin   -->
+            <!-- -------------------- -->
 
-                <button class="btn btn-secondary" routerLink="/editexp/{{Experiencia.id}}">
-                    <i class="fa fa-pen text-secondary"></i>  Editar</button>
-            </td>
-                
-            <td *ngIf="isLogged" >
-                <button class="btn btn-secondary" (click)="delete(Experiencia.id)">
-                    <i class="fa fa-trash-can text-secondary"></i>  Borrar</button>
-                
-                </td>
-        </tr>
-       </table>
-    </div>
-       
     
-       
-       
-       
-       
-       
-       
-       
-       
-        -->
-       
-       
-       
-       
-       
-       
-
-
+    
         </div>
     </div>
 </div>
 
 
-    <!-- <ul>
-            <li *ngFor="let experiencia of experienciaList">
-                
-        <div class="row texto mt-3" display="flex">
-            <div class="col-2 align-self-center justify-content-center">
-                <img 
-                class="fotoeducacion "
-                [src]="experiencia.img"/>
-            </div>
-        
-        <div class="col-8">
-                <h5>{{experiencia.Company}}</h5>
-                <h6>{{experiencia.position}}</h6>
-                <p>{{experiencia.mode}}</p>
-                <p><time>{{experiencia.start}}</time> - <time>{{experiencia.end}}</time></p>
-            </div>
-            <div class="col-2 align-self-center   ">
-                <button class="btn btn-secondary tarjeta "><a href="#" class="texto">{{experiencia.web}}</a></button>
-            </div>
-        </div>        
-        
-    </li>
-</ul>
--->
+   

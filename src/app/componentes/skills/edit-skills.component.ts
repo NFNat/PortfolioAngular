@@ -21,8 +21,8 @@ export class EditSkillsComponent implements OnInit {
     private tokenService: TokenService
 
   ) { }
-  isLogged = false;
 
+  isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -33,7 +33,6 @@ export class EditSkillsComponent implements OnInit {
       this.isLogged = false;
     }
     if (this.isLogged) {
-
       this.skillsS.detail(id).subscribe(
         data => {
           this.skills = data;
@@ -45,32 +44,23 @@ export class EditSkillsComponent implements OnInit {
     } else {
       alert("No autorizado")
       this.router.navigate(['portfolio']);
-
     }
-
   }
-  
 
-onUpdate(): void{
-  const id = this.activatedRouter.snapshot.params['id'];
-  this.skillsS.update(id, this.skills).subscribe(
-  data => {
-    this.router.navigate(['']);
-  },err =>{
-    alert("error al modificar esta skill");
-    this.router.navigate(['']);
+
+  onUpdate(): void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.skillsS.update(id, this.skills).subscribe(
+      data => {
+        this.router.navigate(['']);
+      }, err => {
+        alert("error al modificar esta skill");
+        this.router.navigate(['']);
+      }
+    )
   }
-  )
-}
-volver():void{
-  this.router.navigate(['portfolio'])
-
-}
-
-
-
-
-
-
+  volver(): void {
+    this.router.navigate(['portfolio'])
+  }
 
 }

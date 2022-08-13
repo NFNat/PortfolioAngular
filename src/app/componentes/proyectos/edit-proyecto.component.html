@@ -4,54 +4,40 @@
 
             <div class="col-12">
                 <div class="card fondo shadow rounded">
-                  <div class="card-body ">
-                    <h5 class="card-title texto m-2"> Editar Proyecto</h5>
+                    <div class="card-body ">
+                        <h5 class="card-title texto m-2"> Editar Proyecto</h5>
+                        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                            <div class="form-group texto m-3">
+                                <label for="nombreProy" class="m-2">Editar nombre del proyecto</label>
+                                <input type="text" class="form-control" id="nombreProy" name="nombreProy"
+                                    [(ngModel)]="proyectos.nombreProy" required>
+                            </div>
+                            <div class="form-group texto m-3">
+                                <label for="descProy" class="m-2">Editar la Descripcion</label>
+                                <input type="text" class="form-control" id="descProy" name="descProy"
+                                    [(ngModel)]="proyectos.descProy" required>
+                            </div>
+                            <div class="form-group texto m-3">
+                                <label for="webProy" class="m-2">Editar la ruta de la imagen</label>
+                                <input type="text" class="form-control" id="webProy" name="webProy"
+                                    [(ngModel)]="proyectos.webProy" required>
+                            </div>
 
+                            <!-- Botones modificar y Volver -->
 
-
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group texto m-3">
-
-                    <!-- empresa -->
-
-                    <label for="nombreProy" class="m-2">Editar nombre del proyecto</label>
-                    <input type="text" class="form-control" id="nombreProy" name="nombreProy" [(ngModel)]="proyectos.nombreProy" required>
+                            <div class="row ">
+                                <div class="col-6 text-satrt  ">
+                                    <button class="btn texto tarjeta"> Modificar </button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                
-                <!-- posicion -->
-
-                <div class="form-group texto m-3">
-                    <label for="descProy" class="m-2">Editar la Descripcion</label>
-                    <input type="text" class="form-control" id="descProy" name="descProy" [(ngModel)]="proyectos.descProy" required>
-                </div>
-
-                <!-- modo -->
-
-
-                <div class="form-group texto m-3">
-                    <label for="webProy" class="m-2">Editar la ruta de la imagen</label>
-                    <input type="text" class="form-control" id="webProy" name="webProy" [(ngModel)]="proyectos.webProy" required>
-                </div>
-
-                <div class="row ">
-
-                    <div class="col-6 text-satrt  ">
-                <button class="btn texto tarjeta"> modificar </button>
-
             </div>
-            <div class="col-6 text-end">
-                <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
 
-            </div>
-        </div>
-
-
-            </form>
         </div>
     </div>
 </div>
-
-</div>
-</div>
-</div>
-

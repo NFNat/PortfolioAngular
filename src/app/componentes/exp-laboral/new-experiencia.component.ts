@@ -10,9 +10,8 @@ import { TokenService } from 'src/app/servicio/token.service';
   styleUrls: ['./new-experiencia.component.scss']
 })
 export class NewExperienciaComponent implements OnInit {
-  nombreE: string ='';
+  nombreE: string = '';
   descripcionE: string = '';
-
   positionE: string = '';
   modoE: string = '';
   startE: string = '';
@@ -20,18 +19,14 @@ export class NewExperienciaComponent implements OnInit {
   webE: string = '';
   imgE: string = '';
 
-
-
-
   constructor(
-    private servExperiencia: ServExperienciaService, 
+    private servExperiencia: ServExperienciaService,
     private router: Router,
     private activatedRouter: ActivatedRoute,
-    private tokenService: TokenService  
-    
-    
-    ) { }
-    isLogged = false;
+    private tokenService: TokenService
+  ) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -42,36 +37,34 @@ export class NewExperienciaComponent implements OnInit {
     }
     if (this.isLogged) {
 
-  } else {
-    alert("No autorizado")
-    this.router.navigate(['portfolio']);
+    } else {
+      alert("No autorizado")
+      this.router.navigate(['portfolio']);
+    }
   }
 
-
-
-
-
-
-
-  }
-  onCreate():void{
-    const expe = new Experiencia(this.nombreE, this.descripcionE, this.positionE, this.modoE, this.startE, this.endE, this.webE,this.imgE);
-    this.servExperiencia.save(expe).subscribe(data =>{
+  onCreate(): void {
+    const expe = new Experiencia(
+      this.nombreE, 
+      this.descripcionE, 
+      this.positionE, 
+      this.modoE, 
+      this.startE, 
+      this.endE, 
+      this.webE, 
+      this.imgE
+      );
+    this.servExperiencia.save(expe).subscribe(data => {
       alert("experiencia añadida");
       this.router.navigate(['']);
-    }, err =>{
+    }, err => {
       alert("Falló");
       this.router.navigate(['']);
     }
     )
   }
 
-
-  volver():void{
+  volver(): void {
     this.router.navigate(['portfolio'])
-
   }
-
-  
-
 }

@@ -1,21 +1,38 @@
-
 .fondo {
-    background-color: rgba(46, 2, 59, 0.95);
-  }
-  
-  .texto {
-    color: #AF9120;
-    font-weight: bold;
-  }
-  .texto1 {
-    color: #AF9120;
-    //font-weight: bold;
-  }
-  .tarjeta {
-    background-color: rgba(112, 60, 108, 0.4);
+  background-color: rgba(46, 2, 59, 0.95);
+}
+
+.texto {
+  color: #AF9120;
+  font-weight: bold;
+}
+
+.texto1 {
+  color: #AF9120;
+}
+
+.tarjeta {
+  background-color: rgba(112, 60, 108, 0.0);
+  border:none;
 }
 
 a {
   color: #8f878a;
   text-decoration: none;
+}
+
+
+.tarjeta1 {
+  background-color: rgba(112, 60, 108, 0.4);
+  border-radius: 45px;
+}
+.tarjeta2 {
+  background-color: rgba(112, 60, 108, 0.4);
+}
+.grilla{
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 13rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem),1fr));
+
 }

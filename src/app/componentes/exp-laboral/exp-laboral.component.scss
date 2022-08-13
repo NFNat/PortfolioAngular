@@ -1,13 +1,13 @@
 a {
     text-decoration: none;
 }
-.fotoeducacion{
+
+.fotoeducacion {
     max-width: 100px;
-   
 }
 
 li {
-    list-style:none;
+    list-style: none;
 }
 
 .fondo {
@@ -18,10 +18,16 @@ li {
     color: #AF9120;
     font-weight: bold;
 }
+
 .texto1 {
     color: #AF9120;
-    
 }
+
 .tarjeta {
     background-color: rgba(112, 60, 108, 0.5);
+}
+
+.tarjeta1 {
+    background-color: rgba(112, 60, 108, 0.5);
+    border-radius: 50px;
 }

@@ -13,7 +13,6 @@ export class Datos {
         this.lugar = lugar;
         this.imagen = imagen;
 
-    }
-    
+    }   
 
 }

@@ -4,56 +4,44 @@
 
             <div class="col-12">
                 <div class="card fondo shadow rounded">
-                  <div class="card-body ">
-                    <h5 class="card-title texto m-2"> Cargar Nuevo idioma</h5>
+                    <div class="card-body ">
+                        <h5 class="card-title texto m-2"> Cargar Nuevo idioma</h5>
 
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group texto m-3">
 
+                                <label for="idioma" class="m-2">Cargar el idioma</label>
+                                <input type="text" class="form-control" id="idioma" name="idioma" [(ngModel)]="idioma"
+                                    required>
+                            </div>
 
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group texto m-3">
+                            <div class="form-group texto m-3">
+                                <label for="nivel" class="m-2">Cargar el nivel alcanzado</label>
+                                <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="nivel"
+                                    required>
+                            </div>
 
-                    <!-- empresa -->
+                            <div class="form-group texto m-3">
+                                <label for="progressId" class="m-2">Cargar el progreso</label>
+                                <input type="number" class="form-control" id="progressId" name="progressId"
+                                    [(ngModel)]="progressId" required>
+                            </div>
+                            
+                            <!-- Botones de Agregar y Volver -->
 
-                    <label for="idioma" class="m-2">Cargar el idioma</label>
-                    <input type="text" class="form-control" id="idioma" name="idioma" [(ngModel)]="idioma" required>
+                            <div class="row ">
+                                <div class="col-6 text-satrt  ">
+                                    <button class="btn texto tarjeta"> Agregar </button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                
-                <!-- posicion -->
-
-
-                <div class="form-group texto m-3">
-                    <label for="nivel" class="m-2">Cargar el nivel alcanzado</label>
-                    <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="nivel" required>
-                </div>
-
-                <div class="form-group texto m-3">
-                    <label for="progressId" class="m-2">Cargar el progreso</label>
-                    <input type="number" class="form-control" id="progressId" name="progressId" [(ngModel)]="progressId" required>
-                </div>
-
-                <!-- modo -->
-
-                <div class="row ">
-
-                    <div class="col-6 text-satrt  ">
-
-
-                <button class="btn texto tarjeta"> Agregar </button>
             </div>
-            <div class="col-6 text-end">
-                <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
-            </div>
-        </div>
 
-
-            </form>
         </div>
     </div>
 </div>
-
-</div>
-</div>
-</div>
-
-
-

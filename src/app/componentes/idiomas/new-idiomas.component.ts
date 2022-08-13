@@ -11,18 +11,18 @@ import { TokenService } from 'src/app/servicio/token.service';
 })
 export class NewIdiomasComponent implements OnInit {
 
-    idioma: string = "";
-    nivel: string ="";
-    progressId: number=0;
+  idioma: string = "";
+  nivel: string = "";
+  progressId: number = 0;
 
   constructor(
-    private idiomasServ: IdiomasService, 
+    private idiomasServ: IdiomasService,
     private router: Router,
     private activatedRouter: ActivatedRoute,
-    private tokenService: TokenService 
-    
-    ) { }
-    isLogged = false;
+    private tokenService: TokenService
+
+  ) { }
+  isLogged = false;
 
 
   ngOnInit(): void {
@@ -34,31 +34,24 @@ export class NewIdiomasComponent implements OnInit {
     }
     if (this.isLogged) {
 
-  } else {
-    alert("No autorizado")
-    this.router.navigate(['portfolio']);
+    } else {
+      alert("No autorizado")
+      this.router.navigate(['portfolio']);
+    }
   }
 
-  
-
-   
-  }
-  onCreate():void{
+  onCreate(): void {
     const idiomas = new Idiomas(this.idioma, this.nivel, this.progressId);
-    this.idiomasServ.save(idiomas).subscribe(data =>{
+    this.idiomasServ.save(idiomas).subscribe(data => {
       alert("Idioma agregado");
       this.router.navigate(['']);
-    },err =>{
-    alert("falló");
-    this.router.navigate(['']);
-    }  
+    }, err => {
+      alert("falló");
+      this.router.navigate(['']);
+    }
     )
   }
-  volver():void{
+  volver(): void {
     this.router.navigate(['portfolio'])
-
   }
-
-
-
 }

@@ -11,20 +11,18 @@ import { TokenService } from 'src/app/servicio/token.service';
 })
 export class NewSkillsComponent implements OnInit {
 
-    nameSkill: string = "";
-    progress: number = 0;
-    imgSkill: string = "";
+  nameSkill: string = "";
+  progress: number = 0;
+  imgSkill: string = "";
 
   constructor(
-    private skillsS: SkillsService, 
+    private skillsS: SkillsService,
     private router: Router,
     private activatedRouter: ActivatedRoute,
-    private tokenService: TokenService     
-    
-    
-    ) { }
-    isLogged = false;
+    private tokenService: TokenService
 
+  ) { }
+  isLogged = false;
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -35,29 +33,26 @@ export class NewSkillsComponent implements OnInit {
     }
     if (this.isLogged) {
 
-  } else {
-    alert("No autorizado")
-    this.router.navigate(['portfolio']);
+    } else {
+      alert("No autorizado")
+      this.router.navigate(['portfolio']);
+    }
   }
+
+  onCreate(): void {
+    const skills = new Skills(this.nameSkill, this.progress, this.imgSkill);
+    this.skillsS.save(skills).subscribe(data => {
+      alert("Skill agregada");
+      this.router.navigate(['']);
+    }, err => {
+      alert("falló");
+      this.router.navigate(['']);
+    }
+    )
   }
 
+  volver(): void {
+    this.router.navigate(['portfolio'])
 
-
-onCreate():void{
-  const skills = new Skills(this.nameSkill, this.progress, this.imgSkill);
-  this.skillsS.save(skills).subscribe(data =>{
-    alert("Skill agregada");
-    this.router.navigate(['']);
-  },err =>{
-  alert("falló");
-  this.router.navigate(['']);
-  }  
-  )
-}
-
-
-volver():void{
-  this.router.navigate(['portfolio'])
-
-}
+  }
 }

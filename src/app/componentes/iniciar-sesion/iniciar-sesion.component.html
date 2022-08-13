@@ -1,47 +1,50 @@
 <div class="container-fluid suplogin">
-<!-- <form> -->
 
-
-  <div class="container login " >
+  <div class="container login ">
     <div class="row">
       <div class="col-12">
         <div class="card fondo shadow rounded">
           <div class="card-body ">
-            <h5 class="card-title texto"> Login </h5>
+            <h5 class="card-title texto text-center"> Login </h5>
 
             <form #f="ngForm" (ngSubmit)=" onLogin()" novalidate>
-              <label for="nombreUsuario" class="form-label texto">User</label>
-              <input type="email" class="form-control tarjeta" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required />
-  
-              <div class="mb-3">
-                <label for="password" class="form-label texto ">Password</label>
-                <input type="password" name="password" class="form-control tarjeta" id="password"  [(ngModel)]="password" required>
+
+              <div class="row m-2">
+                <div class="">
+                  <label for="nombreUsuario" class="form-label texto">User</label>
+                  <input type="email" class="form-control tarjeta" id="nombreUsuario" name="nombreUsuario"
+                    [(ngModel)]="nombreUsuario" required />
+                </div>
+
+                <div class="">
+                  <label for="password" class="form-label texto ">Password</label>
+                  <input type="password" name="password" class="form-control tarjeta" id="password"
+                    [(ngModel)]="password" required>
+                </div>
               </div>
-              
-              <div class="boton ">
-  
-              <button type="submit" class="btn btn-secondary tarjeta ">Login</button>
-            </div>
 
+              <div class="row m-5">
+                <div class="col-6 text-satrt  ">
+                  <div class="boton ">
+                    <button type="submit" class="btn texto tarjeta ">Login</button>
+                  </div>
+                </div>
+                <div class="col-6 text-end">
+                  <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
+                </div>
+              </div>
             </form>
-
-
-           
           </div>
+
           <div class="m-3">
-            <p class="form-label texto text-center ">¿No tienes una cuenta? <a href="#!" class="form-label texto ">Sign Up</a>
+            <p class="form-label texto text-center ">¿No tienes una cuenta?
+              <a
+                href="mailto:natalia_fuoco@hotmail.com?subject=Solicitud Alta usuario&body=Por favor crear un usuario, mi email es: ..."><i
+                  class="fa-solid fa-at texto"></i> SignUp</a>
             </p>
           </div>
-
-
         </div>
       </div>
-
     </div>
-
   </div>
-
-
-
-<!-- </form> -->
 </div>

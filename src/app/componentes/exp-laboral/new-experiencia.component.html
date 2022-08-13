@@ -4,96 +4,73 @@
 
             <div class="col-12">
                 <div class="card fondo shadow rounded">
-                  <div class="card-body ">
-                    <h5 class="card-title texto m-2"> Cargar Nueva Experiencia</h5>
+                    <div class="card-body ">
+                        <h5 class="card-title texto m-2"> Cargar Nueva Experiencia</h5>
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
 
+                            <div class="form-group texto m-3">
+                                <label for="nombreE" class="m-2">Nombre de la empresa</label>
+                                <input type="text" class="form-control" id="nombreE" name="nombreE"
+                                    [(ngModel)]="nombreE" required>
+                            </div>
 
+                            <div class="form-group texto m-3">
+                                <label for="positionE" class="m-2">Cargar la posicion</label>
+                                <input type="text" class="form-control" id="positionE" name="positionE"
+                                    [(ngModel)]="positionE" required>
+                            </div>
 
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group texto m-3">
+                            <div class="form-group texto m-3">
+                                <label for="modoE" class="m-2">Cargar la modalidad</label>
+                                <input type="text" class="form-control" id="modoE" name="modoE" [(ngModel)]="modoE"
+                                    required>
+                            </div>
 
-                    <!-- empresa -->
+                            <div class="form-group texto m-3">
+                                <label for="descripcionE" class="m-2">Cargar las actividades realizadas</label>
+                                <textarea name="descripcionE" id="descripcionE" cols="30" rows="5" type="text"
+                                    class="form-control" [(ngModel)]="descripcionE" required></textarea>
+                            </div>
 
-                    <label for="nombreE" class="m-2">Nombre de la empresa</label>
-                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
+                            <div class="form-group texto m-3">
+                                <label for="startE" class="m-2">Cargar año de inicio</label>
+                                <input type="text" class="form-control" id="startE" name="startE" [(ngModel)]="startE"
+                                    required>
+                            </div>
+
+                            <div class="form-group texto m-3">
+                                <label for="endE" class="m-2">Cargar año de finalizacion</label>
+                                <input type="text" class="form-control" id="endE" name="endE" [(ngModel)]="endE"
+                                    required>
+                            </div>
+                            
+                            <div class="form-group texto m-3">
+                                <label for="webE" class="m-2">Cargar la pagina web de la empresa</label>
+                                <input type="text" class="form-control" id="webE" name="webE" [(ngModel)]="webE"
+                                    required>
+                            </div>
+
+                            <div class="form-group texto m-3">
+                                <label for="imgE" class="m-2">Cargar la ruta de la imagen </label>
+                                <input type="text" class="form-control" id="imgE" name="imgE" [(ngModel)]="imgE"
+                                    required>
+                            </div>
+
+                            <!-- Botones de Agregarr y voler -->
+
+                            <div class="row ">
+                                <div class="col-6 text-satrt  ">
+                                    <button class="btn texto tarjeta"> Agregar </button>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
-                
-                <!-- posicion -->
-
-                <div class="form-group texto m-3">
-                    <label for="positionE" class="m-2">Cargar la posicion</label>
-                    <input type="text" class="form-control" id="positionE" name="positionE" [(ngModel)]="positionE" required>
-                </div>
-
-                <!-- modo -->
-
-
-                <div class="form-group texto m-3">
-                    <label for="modoE" class="m-2">Cargar la modalidad</label>
-                    <input type="text" class="form-control" id="modoE" name="modoE" [(ngModel)]="modoE" required>
-                </div>
-
-                <!-- actividades  -->
-
-                <div class="form-group texto m-3">
-                    <label for="descripcionE" class="m-2">Cargar las actividades realizadas</label>
-                    <textarea name="descripcionE" id="descripcionE" cols="30" rows="5" type="text" class="form-control" [(ngModel)]="descripcionE" required></textarea>
-                </div>
-
-
-
-
-
-
-                <div class="form-group texto m-3">
-                    <label for="startE" class="m-2">Cargar año de inicio</label>
-                    <input type="text" class="form-control" id="startE" name="startE" [(ngModel)]="startE" required>
-                </div>
-
-
-                
-
-                <div class="form-group texto m-3">
-                    <label for="endE" class="m-2">Cargar año de finalizacion</label>
-                    <input type="text" class="form-control" id="endE" name="endE" [(ngModel)]="endE" required>
-                </div>
-
-
-
-                <!-- Web de la empresa -->
-                <div class="form-group texto m-3">
-                    <label for="webE" class="m-2">Cargar la pagina web de la empresa</label>
-                    <input type="text" class="form-control" id="webE" name="webE" [(ngModel)]="webE" required>
-                </div>
-
-                <div class="form-group texto m-3">
-                    <label for="imgE" class="m-2">Cargar la ruta de la imagen </label>
-                    <input type="text" class="form-control" id="imgE" name="imgE" [(ngModel)]="imgE" required>
-                </div>
-
-
-               
-                <div class="row ">
-
-                    <div class="col-6 text-satrt  ">
-
-
-                <button class="btn texto tarjeta"> Agregar </button>
-
             </div>
-
-            <div class="col-6 text-end">
-
-                <button class="btn texto tarjeta" (click)="volver()"> Volver </button>
-            </div>
-        </div>
-
-            </form>
         </div>
     </div>
 </div>
-
-</div>
-</div>
-</div>
-

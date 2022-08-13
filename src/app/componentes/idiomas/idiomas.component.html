@@ -1,88 +1,66 @@
-<div class="container mb-3" >
+<div class="container mb-3">
 
-    <div class="card fondo shadow rounded" >
-      <div class="card-body">
-        <div class="row mb-2"> 
-          <div class="col-8">
-            <h5 class="card-title texto">Languages</h5>
-          </div>
-          <div class="col-4">
+  <div class="card fondo shadow rounded">
+    <div class="card-body">
 
-            <button type="button" class="btn texto1 tarjeta" routerLink="/nuevoidi"*ngIf="isLogged" > <i class="fa-solid fa-folder-plus"></i>  Nuevo Idioma</button>
+      <div class="row mb-2">
+        <div class="col-8">
+          <h5 class="card-title texto">Languages</h5>
         </div>
+        <div class="col-4">
+          <button type="button" class="btn texto1 tarjeta" routerLink="/nuevoidi" *ngIf="isLogged"> <i
+              class="fa-solid fa-folder-plus"></i> Nuevo Idioma</button>
         </div>
-        
-        
+      </div>
 
-        <ul class="mt-3">
-          <li *ngFor="let Idiomas of idiomas">
-       
-        <div class="container">
-          <div class="row texto">
-            <div class="row">
-              <div class="col-6">
-                
-              </div>
-              <div class="col-6">
+            <!-- -------------------- -->
+            <!--   Iteracion inicio   -->
+            <!-- -------------------- -->
+
+      <ul class="mt-3">
+        <li *ngFor="let Idiomas of idiomas">
+          <div class="container">
+            <div class="row texto">
              
+              <div class="col-3">
+                <h5>{{Idiomas.idioma}}</h5>
               </div>
-              
+              <div class="col-7">{{Idiomas.nivel}}</div>
+              <div class="col-1">
+                <div class="m-2" *ngIf="isLogged"><a routerLink="/editidi/{{Idiomas.id}}"><i
+                      class="fa fa-pen  texto1"></i></a>
+                </div>
+              </div>
+              <div class="col-1">
+                <div class="m-2 " *ngIf="isLogged">
+                  <a (click)="delete(Idiomas.id)"><i class="fa fa-trash-can texto1"></i> </a>
+                </div>
+              </div>
             </div>
-            <div class="col-3"> <h5>{{Idiomas.idioma}}</h5> </div>
-            <div class="col-7">{{Idiomas.nivel}}</div>
-            <div class="col-1">
-              <div class="m-2" *ngIf="isLogged"><a  routerLink="/editidi/{{Idiomas.id}}"><i class="fa fa-pen  texto1"></i></a> 
-              </div>
-            </div>
-            <div class="col-1">
-            <div class="m-2 "  *ngIf="isLogged" >
-              <a (click)="delete(Idiomas.id)"><i class="fa fa-trash-can texto1"></i> </a>
-                </div> 
-              </div>
-
-            
           </div>
-        </div>
         </li>
       </ul>
-          
-        <br>
-        <!-- hobbies -->
-        <h5 class="card-title texto">Hobbies</h5>
-        <div class="container">
-          <div class="row">
-            <div class="col-6 texto1">
-              <i class="fa-solid fa-palette"></i>Amateur painter
+
+            <!-- -------------------- -->
+            <!--   Iteracion fin   -->
+            <!-- -------------------- -->
+
+      <br>
+
+      <!-- hobbies -->
+      <h5 class="card-title texto">Hobbies</h5>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 texto1">
+            <i class="fa-solid fa-palette"></i>Amateur painter
+          </div>
+          <div class="col-6">
+            <div class="project"><a href="#" class=" text-decoration-none texto link-secondary"> (My jobs)</a>
             </div>
-            <div class="col-6">
-              <div class="project"><a href="#" class=" text-decoration-none texto link-secondary"> (My jobs)</a>
-              </div>
-            </div>
-
-
-
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>
         </div>
-
-
-
-
       </div>
+      
     </div>
-  
+  </div>
 </div>

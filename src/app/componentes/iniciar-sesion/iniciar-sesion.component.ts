@@ -58,5 +58,9 @@ export class IniciarSesionComponent implements OnInit {
 
 
   }
+
+  volver(): void {
+    this.router.navigate(['portfolio'])
+  }
 }
 

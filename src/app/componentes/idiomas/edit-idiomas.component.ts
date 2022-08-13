@@ -30,43 +30,36 @@ export class EditIdiomasComponent implements OnInit {
       this.isLogged = false;
     }
     if (this.isLogged) {
-
-
-
-
-    this.idiomasServ.detail(id).subscribe(
-      data=> {
-        this.idiomas=data;
-      }, err =>{
-        alert("error al modificar el idioma");
-        this.router.navigate(['']);
-      }
-    )
-  }else {
-    alert("No autorizado")
-    this.router.navigate(['portfolio']);
-
+      this.idiomasServ.detail(id).subscribe(
+        data => {
+          this.idiomas = data;
+        }, err => {
+          alert("error al modificar el idioma");
+          this.router.navigate(['']);
+        }
+      )
+    } else {
+      alert("No autorizado")
+      this.router.navigate(['portfolio']);
+    }
   }
 
-}
-
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.idiomasServ.update(id, this.idiomas).subscribe(
       data => {
         this.router.navigate(['']);
-      },err =>{
+      }, err => {
         alert("error al modificar la experien");
         this.router.navigate(['']);
       }
     )
   }
 
-  volver():void{
+  volver(): void {
     this.router.navigate(['portfolio'])
-
   }
-
+  
 }
 
 

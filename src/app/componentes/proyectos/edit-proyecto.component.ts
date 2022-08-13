@@ -17,8 +17,7 @@ export class EditProyectoComponent implements OnInit {
     private proyetoServ: ProyectosService,
     private activatedRouter: ActivatedRoute,
     private router: Router,
-    private tokenService: TokenService 
-
+    private tokenService: TokenService
   ) { }
 
   isLogged = false;
@@ -33,39 +32,29 @@ export class EditProyectoComponent implements OnInit {
     }
 
     if (this.isLogged) {
+      this.proyetoServ.detail(id).subscribe(
+        data => {
+          this.proyectos = data;
+        }, err => {
+          alert("error al modificar este proyecto");
+          this.router.navigate(['']);
+        }
+      )
+    } else {
+      alert("No autorizado")
+      this.router.navigate(['portfolio']);
+    }
+  }
 
-
-    this.proyetoServ.detail(id).subscribe(
+  onUpdate(): void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.proyetoServ.update(id, this.proyectos).subscribe(
       data => {
-        this.proyectos = data;
-      }, err => {
-        alert("error al modificar este proyecto");
         this.router.navigate(['']);
       }
     )
-  }else {
-    alert("No autorizado")
-    this.router.navigate(['portfolio']);
-
   }
-
-}
-
-
-
-
-onUpdate(): void{
-  const id = this.activatedRouter.snapshot.params['id'];
-  this.proyetoServ.update(id, this.proyectos).subscribe(
-    data => {
-      this.router.navigate(['']);
-    }
-  )
-}
-volver():void{
-  this.router.navigate(['portfolio'])
-
-}
-
-
+  volver(): void {
+    this.router.navigate(['portfolio'])
+  }
 }
