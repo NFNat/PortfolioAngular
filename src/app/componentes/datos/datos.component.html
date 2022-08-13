@@ -1,10 +1,10 @@
 <div class="container">
 
-    <div class="card fondo mb-1 " >    
+    <div class="card fondo mb-3 " >    
         <div class="card-body">
             <div class="row texto " >    
                 <div class="col-8 ">
-                    <h5 class="card-title text-center texto1 ">Datos personales</h5>
+                    <h5 class="card-title text-start texto1 ">Datos personales</h5>
                 </div>
     
                 <!-- Boton de agregar nuevo -->
@@ -14,8 +14,7 @@
                             class="fa-solid fa-folder-plus"></i> Nuevo</button>
                 </div>
             </div>
-        </div>
-    </div>
+        
 
     <!-- -------------------- -->
     <!--   Iteracion inicio   -->
@@ -26,24 +25,19 @@
         <li *ngFor="let Datos of datos">
     
             <div class="row ">    
-    
-                <div class="col-3 ">
-                    <div class="card fondo">
-                        <!-- <div class="card-body"> -->
+                <div class="col-lg-3 col-sm-12">
+                    
                         <div class="row  ">
                             <div class="d-flex justify-content-center align-items-center ">
                                 <img Class=" rounded-circle foto img-fluid p-2" [src]="Datos.imagen" />
                             </div>
-                        </div>
-                        <!-- </div> -->
-                    </div>
+                        </div>                       
                 </div>
     
-                <div class="col-9 ">
-                    <div class="card fondo ">
-                        <div class="card-body">
+                <div class="col-lg-9 col-sm-12 ">
+                    
                             <div class="row">
-                                <div class="col-9 texto "> {{Datos.nombre}}
+                                <div class="col-lg-9 col-sm-7 texto "> {{Datos.nombre}}
                                     <br> <br>
                                     {{Datos.ocupacion}}
                                     <br>
@@ -54,24 +48,20 @@
 
                                 <!-- Botones editar y borrar -->   
     
-                                <div class="col-3">
-                                    <div class="row m-3 d-flex " *ngIf="isLogged">
-                                        <button type="button" class="btn  texto1 tarjeta  "
+                                <div class="col-lg-3 col-sm-5 ">
+                                    <div class="row m-3  " *ngIf="isLogged">
+                                        <button type="button" class="btn texto1 tarjeta" 
                                             routerLink="/editdato/{{Datos.id}}">
-                                            <i class="fa fa-pen  texto1"></i></button>
+                                            <i class="fa fa-pen  texto1"></i> Editar</button>
                                     </div>    
                                     <div class="row m-3 " *ngIf="isLogged">
-                                        <button class="btn  texto1 tarjeta" (click)="delete(Datos.id)">
-                                            <i class="fa fa-trash-can texto1"></i></button>
+                                        <button type="button" class="btn texto1 tarjeta" (click)="delete(Datos.id)">
+                                            <i class="fa fa-trash-can texto1"></i> Borrar</button>
                                     </div>
                                 </div>
-
                             </div>
                         </div>    
-                    </div>
-                </div>
-    
-            </div>    
+            </div>  
     
         </li>
     </ul>
@@ -81,4 +71,6 @@
     <!--    Iteracion fin     -->
     <!-- -------------------- -->
 
+</div>
+</div>
 </div>

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="card fondo mb-3" style="--bs-bg-opacity: 0.5 ;">
     <div class="row texto  " display="flex">
-      <div class="col-11">
+      <!-- <div class="col-12"> -->
         <div class="card-body">
           <div class="row mb-2">
             <div class="col-8">
@@ -25,7 +25,7 @@
 
                   <!-- Acerca de: -->
 
-                  <div class="col-10">
+                  <div class="col-lg-10 col-sm-12 ">
                     <div class="row texto   m-2 mb-4">
                       <div class="col">
                         <p class="card-text">{{About.about}}</p>
@@ -35,15 +35,15 @@
 
                 <!-- Botones de edicion y eliminar -->
 
-                  <div class="col-2">
-                    <div class="row m-2 d-flex " *ngIf="isLogged">
+                  <div class="col-lg-2 col-sm-12">
+                    <div class="row m-3" *ngIf="isLogged">
                       <button class="btn  texto tarjeta  " routerLink="/editabout/{{About.id}}">
-                        <i class="fa fa-pen "></i></button>                    
+                        <i class="fa fa-pen "></i> Editar</button>                    
                     </div>
 
-                    <div class="row m-2 d-flex" *ngIf="isLogged">
+                    <div class="row m-3 " *ngIf="isLogged">
                       <button class="btn  texto tarjeta  " (click)="delete(About.id)">
-                        <i class="fa fa-trash-can "></i></button>
+                        <i class="fa fa-trash-can "></i> Borrar</button>
                     </div>
 
                   </div>
@@ -61,4 +61,4 @@
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
