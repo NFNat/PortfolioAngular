@@ -4,9 +4,9 @@
             <div class="col-lg-8 col-sm-6">
                 <h3 class="texto mx-3 "> Educacion</h3>
             </div>
-            <div class="col-lg-4 col-sm-6 ">
+            <div class="col-lg-4 col-sm-6 mt-2 d-flex justify-content-end align-items-center">
                 <button type="button" class="btn  texto1 tarjeta" routerLink="/nuevaedu" *ngIf="isLogged"> <i
-                        class="fa-solid fa-folder-plus"></i> Nueva Educacion</button>
+                        class="fa-solid fa-folder-plus"></i> Agregar</button>
             </div>
         </div>
 
@@ -15,7 +15,7 @@
              <!-- -------------------- -->
             <!--   Iteracion inicio   -->
             <!-- -------------------- -->
-
+            
 
             <ul>
                 <li *ngFor="let Educacion of educacion">
@@ -37,7 +37,7 @@
                         <!-- Botones de Editar y borrar -->
 
                         <div class="col-lg-2 col-md-12  ">
-                            <div class="row m-2 d-flex " *ngIf="isLogged">
+                            <div class="row m-2  " *ngIf="isLogged">
                                 <button class="btn  texto1 tarjeta  " routerLink="/editedu/{{Educacion.id}}">
                                     <i class="fa fa-pen  texto1"></i> Editar</button>
                             </div>

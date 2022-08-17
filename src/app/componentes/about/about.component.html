@@ -11,8 +11,13 @@
             <!-- Boton de agregar nuevo -->
 
             <div class="col-4">
-              <button type="button" class="btn  texto tarjeta" routerLink="/nuevoabout" *ngIf="isLogged"> <i
-                  class="fa-solid fa-folder-plus"></i> Nuevo</button>
+
+              <!-- Comento este boton de agregar nuevo about solo para que pueda editarse hasta que 
+              aprenda la manera de hacerlo condicional a que si hay una persona solo pueda haber un about -->
+
+
+              <!-- <button type="button" class="btn  texto tarjeta" routerLink="/nuevoabout" *ngIf="isLogged"> <i
+                  class="fa-solid fa-folder-plus"></i> Nuevo</button> -->
             </div>
 
             <!-- -------------------- -->
@@ -41,9 +46,12 @@
                         <i class="fa fa-pen "></i> Editar</button>                    
                     </div>
 
+                    <!-- Comento este boton de eliminar about  hasta que 
+              aprenda la manera de hacerlo condicional a que si hay una persona solo pueda haber un about -->
+
                     <div class="row m-3 " *ngIf="isLogged">
-                      <button class="btn  texto tarjeta  " (click)="delete(About.id)">
-                        <i class="fa fa-trash-can "></i> Borrar</button>
+                      <!-- <button class="btn  texto tarjeta  " (click)="delete(About.id)">
+                        <i class="fa fa-trash-can "></i> Borrar</button> -->
                     </div>
 
                   </div>

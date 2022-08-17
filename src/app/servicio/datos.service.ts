@@ -7,7 +7,12 @@ import { Datos } from '../model/datos';
   providedIn: 'root'
 })
 export class DatosService {
-  URL = 'http://localhost:8080/datos/';
+
+  //Entorno local
+ // URL = 'http://localhost:8080/datos/';
+ 
+  //Deploy
+  URL = 'https://backendnf.herokuapp.com/datos/';
 
 
 

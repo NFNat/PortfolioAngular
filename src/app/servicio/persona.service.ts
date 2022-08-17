@@ -7,7 +7,11 @@ import { Persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = "http://localhost:8080/personas/"
+  //Enotrno local
+  //URL = 'http://localhost:8080/personas/';
+  
+  //Deploy
+  URL = "https://backendnf.herokuapp.com/personas/"
 
   constructor(private httpClient: HttpClient) { }
 

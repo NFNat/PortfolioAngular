@@ -9,7 +9,11 @@ import { Skills } from '../model/skills';
 
 
 export class SkillsService {
-URL = 'http://localhost:8080/skills/';
+  //Entorno local
+  //URL = 'http://localhost:8080/skills/';
+  
+  //Deploy  
+  URL = 'https://backendnf.herokuapp.com/skills/';
 
 
 

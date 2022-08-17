@@ -7,7 +7,11 @@ import { Idiomas } from '../model/idiomas';
   providedIn: 'root'
 })
 export class IdiomasService {
-  URL = 'http://localhost:8080/idiomas/';
+  //Entorno local
+  //URL = 'http://localhost:8080/idiomas/';
+  
+  //Deploy
+ URL = 'https://backendnf.herokuapp.com/idiomas/';
   
   constructor(private httpClient : HttpClient) { }
 

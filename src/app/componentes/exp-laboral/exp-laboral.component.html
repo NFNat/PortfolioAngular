@@ -5,9 +5,9 @@
             <div class="col-lg-8 col-sm-6">
                 <h3 class="texto mx-3"> Experiencia Laboral</h3>
             </div>
-            <div class="col-lg-4 col-sm-6 ">
+            <div class="col-lg-4 col-sm-6 mt-2 d-flex justify-content-end align-items-center ">
                 <button type="button" class="btn  texto1  tarjeta" routerLink="/nuevaexp" *ngIf="isLogged"> <i
-                        class="fa-solid fa-folder-plus"></i> Nueva Experiencia</button>
+                        class="fa-solid fa-folder-plus"></i> Agregar</button>
             </div>
         </div>
         <div class="mx-5">
@@ -36,7 +36,7 @@
 
                         <!-- Botones de Editar y borrar -->
 
-                        <div class="col-lg-2 col-md-12 d-flex align-items-center justify-content-center  ">
+                        <div class="col-lg-2 col-md-12 ">
                             <div class="row m-2 " *ngIf="isLogged">
                                 <button class="btn  texto1 tarjeta " routerLink="/editexp/{{Experiencia.id}}">
                                     <i class="fa fa-pen  texto1"></i> Editar </button>

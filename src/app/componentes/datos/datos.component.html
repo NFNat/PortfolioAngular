@@ -3,15 +3,20 @@
     <div class="card fondo mb-3 " >    
         <div class="card-body">
             <div class="row texto " >    
-                <div class="col-sm-8 col-12 d-flex justify-content-center align-items-center ">
-                    <h5 class="card-title text-start texto1 ">Datos personales</h5>
+                <div class="col-sm-8 col-12 d-flex justify-content-start align-items-center  ">
+                    <h3 class="card-title text-start texto ">Datos personales</h3>
                 </div>
     
                 <!-- Boton de agregar nuevo -->
     
-                <div class="col-sm-4 col-12 d-flex justify-content-center align-items-center ">
-                    <button type="button" class="btn  texto tarjeta" routerLink="/nuevodato" *ngIf="isLogged"> <i
-                            class="fa-solid fa-folder-plus"></i> Nuevo</button>
+                <div class="col-sm-4 col-12 d-flex justify-content-end align-items-center ">
+
+                    <!-- Comento este boton de agregar nuevo dato solo para que pueda editarse hasta que 
+              aprenda la manera de hacerlo condicional a que si hay una persona solo pueda haber un campo datos -->
+
+<!-- 
+                    <button type="button" class="btn  texto tarjeta me-3" routerLink="/nuevodato" *ngIf="isLogged"> <i
+                            class="fa-solid fa-folder-plus"></i> Nuevo</button> -->
                 </div>
             </div>
         
@@ -48,15 +53,19 @@
 
                                 <!-- Botones editar y borrar -->   
     
-                                <div class="col-lg-3 col-sm-5 ">
-                                    <div class="row m-3  " *ngIf="isLogged">
+                                <div class="col-lg-3 col-sm-5  ">
+                                    <div class="row m-3 d-flex " *ngIf="isLogged">
                                         <button type="button" class="btn texto1 tarjeta" 
                                             routerLink="/editdato/{{Datos.id}}">
                                             <i class="fa fa-pen  texto1"></i> Editar</button>
                                     </div>    
+
+                                    <!-- Comento este boton de eliminar datos  hasta que 
+                                    encuentre la manera de hacerlo condicional a que si hay una persona solo pueda haber un campo datos -->
+                                    
                                     <div class="row m-3 " *ngIf="isLogged">
-                                        <button type="button" class="btn texto1 tarjeta" (click)="delete(Datos.id)">
-                                            <i class="fa fa-trash-can texto1"></i> Borrar</button>
+                                        <!-- <button type="button" class="btn texto1 tarjeta" (click)="delete(Datos.id)">
+                                            <i class="fa fa-trash-can texto1"></i> Borrar</button> -->
                                     </div>
                                 </div>
                             </div>

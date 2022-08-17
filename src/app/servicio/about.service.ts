@@ -7,7 +7,11 @@ import { About } from '../model/about';
   providedIn: 'root'
 })
 export class AboutService {
-  URL = 'http://localhost:8080/about/';
+  //entonrno local
+ // URL = 'http://localhost:8080/about/'; 
+  
+  //Deploy
+  URL = 'https://backendnf.herokuapp.com/about/';
 
   constructor(private httpClient : HttpClient) { }
 
